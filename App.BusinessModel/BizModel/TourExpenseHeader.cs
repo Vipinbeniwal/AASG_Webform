@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace App.BusinessModel
+{
+     public class TourExpenseHeader : CommonProperties
+    {
+        public int tour_expense_header_id { get; set; }
+        public int tour_master_id { get; set; }
+        public System.Guid guid { get; set; }
+        public string tour_name { get; set; }
+        public System.DateTime start_date { get; set; }
+        public System.DateTime end_date { get; set; }
+        public int expense_food_total { get; set; }
+        public int expense_hotel_total { get; set; }
+        public int expense_conveyance_total { get; set; }
+        public int expense_misc_total { get; set; }
+        public int expense_total { get; set; }
+        public int expense_total_approved { get; set; }
+        public int approved_by { get; set; }
+        public string status { get; set; }
+        public bool is_paid { get; set; }
+        public string payment_mode { get; set; }
+        public string payment_ref_number { get; set; }
+        public int payment_made { get; set; }
+    }
+}

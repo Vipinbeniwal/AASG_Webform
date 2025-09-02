@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB65495C-3599-47A4-A4C0-FCE761702D4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.Data</RootNamespace>
+    <AssemblyName>App.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivityLog.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Attendance.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChallanHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChallanItem.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Connection.cs" />
+    <Compile Include="DataModel\ActivityLogDataModel.cs" />
+    <Compile Include="DataModel\ChallanHeaderDataModel.cs" />
+    <Compile Include="DataModel\ChallanItemDataModel.cs" />
+    <Compile Include="DataModel\LoadingMasterDataModel.cs" />
+    <Compile Include="DataModel\DropdownMasterDataModel.cs" />
+    <Compile Include="DataModel\FollowUpDataModel.cs" />
+    <Compile Include="DataModel\ItemMasterDataModel.cs" />
+    <Compile Include="DataModel\LeadHeaderDataModel.cs" />
+    <Compile Include="DataModel\MenuMasterDataModel.cs" />
+    <Compile Include="DataModel\DrawingMasterDataModel.cs" />
+    <Compile Include="DataModel\OnFloorItemMasterDataModel.cs" />
+    <Compile Include="DataModel\DraftMasterDataModel.cs" />
+    <Compile Include="DataModel\ProcessDfgPrintDataModel.cs" />
+    <Compile Include="DataModel\ProcessHoleDataModel.cs" />
+    <Compile Include="DataModel\ProcessPackagingDataModel.cs" />
+    <Compile Include="DataModel\ProcessPaintDataModel.cs" />
+    <Compile Include="DataModel\ProcessTemperingReportDataModel.cs" />
+    <Compile Include="DataModel\ProcessTemperingDataModel.cs" />
+    <Compile Include="DataModel\ProcessStoreDataModel.cs" />
+    <Compile Include="DataModel\ProcessGrindingDataModel.cs" />
+    <Compile Include="DataModel\ProcessWashingOneDataModel.cs" />
+    <Compile Include="DataModel\ProcessWashingDataModel.cs" />
+    <Compile Include="DataModel\ProductionDataModel.cs" />
+    <Compile Include="DataModel\ProcessCuttingDataModel.cs" />
+    <Compile Include="DataModel\PartyMasterDataModel.cs" />
+    <Compile Include="DataModel\ProductionPlanningDataModel.cs" />
+    <Compile Include="DataModel\ProductionTrailDataModel.cs" />
+    <Compile Include="DataModel\sp_ItemProcessDetail_ResultDataModel.cs" />
+    <Compile Include="DataModel\xp_ItemMasterDataModel.cs" />
+    <Compile Include="DataModel\xp_ProcurementHeaderDataModel.cs" />
+    <Compile Include="DataModel\xp_ProcurementItemDataModel.cs" />
+    <Compile Include="DataModel\xp_TimeSheetChildDataModel.cs" />
+    <Compile Include="DataModel\xp_TimeSheetHeaderDataModel.cs" />
+    <Compile Include="DataModel\PurchaseHeaderDataModel.cs" />
+    <Compile Include="DataModel\PurchaseItemDataModel.cs" />
+    <Compile Include="DataModel\SaleHeaderDataModel.cs" />
+    <Compile Include="DataModel\SaleItemDataModel.cs" />
+    <Compile Include="DataModel\sp_StockLedgerDetail_ResultDataModel.cs" />
+    <Compile Include="DataModel\sp_tourdetail_ResultDataModel.cs" />
+    <Compile Include="DataModel\StaffMasterDataModel.cs" />
+    <Compile Include="DataModel\StockIssuanceHeaderDataModel.cs" />
+    <Compile Include="DataModel\StockIssuanceItemDataModel.cs" />
+    <Compile Include="DataModel\StockLedgerDataModel.cs" />
+    <Compile Include="DataModel\SupplierMasterDataModel.cs" />
+    <Compile Include="DataModel\TourExpenseHeaderDataModel.cs" />
+    <Compile Include="DataModel\TourExpenseItemDataModel.cs" />
+    <Compile Include="DataModel\TourGradeMasterDataModel.cs" />
+    <Compile Include="DataModel\TourMasterDataModel.cs" />
+    <Compile Include="DataModel\UserRoleDataModel.cs" />
+    <Compile Include="DraftMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DrawingMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DropdownMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityPillar.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityPillar.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityPillar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityPillar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntityPillar.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionLog.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FeatureMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUp.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IData.cs" />
+    <Compile Include="ItemMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LeadHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OnFloorItemMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PartyMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCutting.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessDfgPrint.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessGrinding.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessHole.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessPackaging.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessPaint.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessStore.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessTempering.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessTemperingReport.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessWashing.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessWashingOne.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Production.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionPlanning.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionTrail.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseItem.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\IActivityLog.cs" />
+    <Compile Include="Repository\IChallanHeader.cs" />
+    <Compile Include="Repository\IChallanItem.cs" />
+    <Compile Include="Repository\ILoadingMaster.cs" />
+    <Compile Include="Repository\IDropdownMaster.cs" />
+    <Compile Include="Repository\IFollowUp.cs" />
+    <Compile Include="Repository\IItemMaster.cs" />
+    <Compile Include="Repository\ILeadHeader.cs" />
+    <Compile Include="Repository\IMenuMaster.cs" />
+    <Compile Include="Repository\IDrawingMaster.cs" />
+    <Compile Include="Repository\IOnFloorItemMaster.cs" />
+    <Compile Include="Repository\IDraftMaster.cs" />
+    <Compile Include="Repository\IProcessDfgPrint.cs" />
+    <Compile Include="Repository\IProcessHole.cs" />
+    <Compile Include="Repository\IProcessPackaging.cs" />
+    <Compile Include="Repository\IProcessPaint.cs" />
+    <Compile Include="Repository\IProcessTemperingReport.cs" />
+    <Compile Include="Repository\IProcessTempering.cs" />
+    <Compile Include="Repository\IProcessStore.cs" />
+    <Compile Include="Repository\IProcessGrinding.cs" />
+    <Compile Include="Repository\IProcessWashingOne.cs" />
+    <Compile Include="Repository\IProcessWashing.cs" />
+    <Compile Include="Repository\IProduction.cs" />
+    <Compile Include="Repository\IProcessCutting.cs" />
+    <Compile Include="Repository\IPartyMaster.cs" />
+    <Compile Include="Repository\IProductionPlanning.cs" />
+    <Compile Include="Repository\IProductionTrail.cs" />
+    <Compile Include="Repository\Isp_ItemProcessDetail_Result.cs" />
+    <Compile Include="Repository\Ixp_ItemMaster.cs" />
+    <Compile Include="Repository\Ixp_ProcurementItem.cs" />
+    <Compile Include="Repository\Ixp_ProcurementHeader.cs" />
+    <Compile Include="Repository\Ixp_TimeSheetChild.cs" />
+    <Compile Include="Repository\Ixp_TimeSheetHeader.cs" />
+    <Compile Include="Repository\IPurchaseHeader.cs" />
+    <Compile Include="Repository\IPurchaseItem.cs" />
+    <Compile Include="Repository\ISaleHeader.cs" />
+    <Compile Include="Repository\ISaleItem.cs" />
+    <Compile Include="Repository\Isp_StockLedgerDetail_Result.cs" />
+    <Compile Include="Repository\Isp_tourdetail_Result.cs" />
+    <Compile Include="Repository\IStaffMaster.cs" />
+    <Compile Include="Repository\IStockIssuanceHeader.cs" />
+    <Compile Include="Repository\IStockIssuanceItem.cs" />
+    <Compile Include="Repository\IStockLedger.cs" />
+    <Compile Include="Repository\ISupplierMaster.cs" />
+    <Compile Include="Repository\ITourExpenseHeader.cs" />
+    <Compile Include="Repository\ITourExpenseItem.cs" />
+    <Compile Include="Repository\ITourGradeMaster.cs" />
+    <Compile Include="Repository\ITourMaster.cs" />
+    <Compile Include="Repository\IUserRole.cs" />
+    <Compile Include="SaleHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SaleItem.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_GetProductionItemBreakageRejectOkCountDetails_Result.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_ItemProcessDetail_Result.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_StockLedgerDetail_Result.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_tourdetail_Result.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockIssuanceHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockIssuanceItem.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StockLedger.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StringToIntList_Result.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourExpenseHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourExpenseItem.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourGradeMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TourMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRole.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwItemListWithModelAndGlassColor.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwPurchaseHeaderSupplierDetail.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwPurchaseOrderDashboardData.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwSaleHeaderPartyDetail.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwSaleOrderDashboardData.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwxp_ProcurementHeaderSupplierDetail.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xp_CustomerRequestHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xp_CustomerRequestItem.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xp_ItemMaster.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xp_ProcurementHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xp_ProcurementItem.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xp_TimeSheetChild.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xp_TimeSheetHeader.cs">
+      <DependentUpon>EntityPillar.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="EntityPillar.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntityPillar.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntityPillar.edmx.diagram">
+      <DependentUpon>EntityPillar.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntityPillar.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityPillar.edmx</DependentUpon>
+      <LastGenOutput>EntityPillar.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityPillar.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntityPillar.edmx</DependentUpon>
+      <LastGenOutput>EntityPillar.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

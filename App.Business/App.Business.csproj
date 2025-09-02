@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82C4C459-81FE-4D2D-83BA-9ABC987430E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.Business</RootNamespace>
+    <AssemblyName>App.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BizControl\ActivityLogBL.cs" />
+    <Compile Include="BizControl\ChallanHeaderBL.cs" />
+    <Compile Include="BizControl\ChallanItemBL.cs" />
+    <Compile Include="BizControl\LoadingMasterBL.cs" />
+    <Compile Include="BizControl\DropdownMasterBL.cs" />
+    <Compile Include="BizControl\FollowUpBL.cs" />
+    <Compile Include="BizControl\ItemMasterBL.cs" />
+    <Compile Include="BizControl\LeadHeaderBL.cs" />
+    <Compile Include="BizControl\MenuMasterBL.cs" />
+    <Compile Include="BizControl\DrawingMasterBL.cs" />
+    <Compile Include="BizControl\OnFloorItemMasterBL.cs" />
+    <Compile Include="BizControl\DraftMasterBL.cs" />
+    <Compile Include="BizControl\ProcessDfgPrintBL.cs" />
+    <Compile Include="BizControl\ProcessPackagingBL.cs" />
+    <Compile Include="BizControl\ProcessHoleBL.cs" />
+    <Compile Include="BizControl\ProcessPaintBL.cs" />
+    <Compile Include="BizControl\ProcessTemperingReportBL.cs" />
+    <Compile Include="BizControl\ProcessTemperingBL.cs" />
+    <Compile Include="BizControl\ProcessStoreBL.cs" />
+    <Compile Include="BizControl\ProcessGrindingBL.cs" />
+    <Compile Include="BizControl\ProcessCuttingBL.cs" />
+    <Compile Include="BizControl\PartyMasterBL.cs" />
+    <Compile Include="BizControl\ProcessWashingOneBL.cs" />
+    <Compile Include="BizControl\ProcessWashingBL.cs" />
+    <Compile Include="BizControl\ProductionBL .cs" />
+    <Compile Include="BizControl\ProductionPlanningBL.cs" />
+    <Compile Include="BizControl\ProductionTrailBL.cs" />
+    <Compile Include="BizControl\sp_ItemProcessDetail_ResultBL.cs" />
+    <Compile Include="BizControl\xp_ItemMasterBL.cs" />
+    <Compile Include="BizControl\xp_ProcurementItemBL.cs" />
+    <Compile Include="BizControl\xp_ProcurementHeaderBL.cs" />
+    <Compile Include="BizControl\xp_TimeSheetChildBL.cs" />
+    <Compile Include="BizControl\xp_TimeSheetHeaderBL.cs" />
+    <Compile Include="BizControl\PurchaseHeaderBL.cs" />
+    <Compile Include="BizControl\PurchaseItemBL.cs" />
+    <Compile Include="BizControl\SaleHeaderBL.cs" />
+    <Compile Include="BizControl\SaleItemBL.cs" />
+    <Compile Include="BizControl\sp_StockLedgerDetail_ResultBL.cs" />
+    <Compile Include="BizControl\sp_tourdetail_ResultBL.cs" />
+    <Compile Include="BizControl\StaffMasterBL.cs" />
+    <Compile Include="BizControl\StockIssuanceHeaderBL.cs" />
+    <Compile Include="BizControl\StockIssuanceItemBL.cs" />
+    <Compile Include="BizControl\StockLedgerBL.cs" />
+    <Compile Include="BizControl\SupplierMasterBL.cs" />
+    <Compile Include="BizControl\TourExpenseHeaderBL.cs" />
+    <Compile Include="BizControl\TourExpenseItemBL.cs" />
+    <Compile Include="BizControl\TourGradeMasterBL.cs" />
+    <Compile Include="BizControl\TourMasterBL.cs" />
+    <Compile Include="BizControl\UserRoleBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.BusinessModel\App.BusinessModel.csproj">
+      <Project>{c9f0bdca-058f-4af8-997c-98345a5250f8}</Project>
+      <Name>App.BusinessModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Data\App.Data.csproj">
+      <Project>{db65495c-3599-47a4-a4c0-fce761702d4f}</Project>
+      <Name>App.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Mapper\App.Mapper.csproj">
+      <Project>{4b018044-fff3-4900-9862-b705b809464f}</Project>
+      <Name>App.Mapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\App.Business.dll" />
+    <Content Include="bin\Debug\App.Business.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

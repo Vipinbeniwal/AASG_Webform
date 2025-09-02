@@ -1,0 +1,1948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="aasgwebModelStoreContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="ActivityLogs">
+      <EntityTypeMapping TypeName="aasgwebModel.ActivityLog">
+        <MappingFragment StoreEntitySet="ActivityLog">
+          <ScalarProperty Name="activity_log_id" ColumnName="activity_log_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="vendor_master_id" ColumnName="vendor_master_id" />
+          <ScalarProperty Name="app_user_id" ColumnName="app_user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="heading" ColumnName="heading" />
+          <ScalarProperty Name="heading_class" ColumnName="heading_class" />
+          <ScalarProperty Name="activity" ColumnName="activity" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="icon_class" ColumnName="icon_class" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attendances">
+      <EntityTypeMapping TypeName="aasgwebModel.Attendance">
+        <MappingFragment StoreEntitySet="Attendance">
+          <ScalarProperty Name="attendance_id" ColumnName="attendance_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="attendance_date" ColumnName="attendance_date" />
+          <ScalarProperty Name="direction" ColumnName="direction" />
+          <ScalarProperty Name="checkin_stamp" ColumnName="checkin_stamp" />
+          <ScalarProperty Name="checkout_stamp" ColumnName="checkout_stamp" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChallanHeaders">
+      <EntityTypeMapping TypeName="aasgwebModel.ChallanHeader">
+        <MappingFragment StoreEntitySet="ChallanHeader">
+          <ScalarProperty Name="challan_header_id" ColumnName="challan_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="loading_master_id" ColumnName="loading_master_id" />
+          <ScalarProperty Name="sale_header_id" ColumnName="sale_header_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="order_number" ColumnName="order_number" />
+          <ScalarProperty Name="total_items_pre_challan" ColumnName="total_items_pre_challan" />
+          <ScalarProperty Name="total_items_after_challan" ColumnName="total_items_after_challan" />
+          <ScalarProperty Name="total_amount_billed" ColumnName="total_amount_billed" />
+          <ScalarProperty Name="total_amount_cash" ColumnName="total_amount_cash" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+          <ScalarProperty Name="tough_discount_precentage" ColumnName="tough_discount_precentage" />
+          <ScalarProperty Name="tough_discount" ColumnName="tough_discount" />
+          <ScalarProperty Name="tough_total_amount" ColumnName="tough_total_amount" />
+          <ScalarProperty Name="tough_billing_amount" ColumnName="tough_billing_amount" />
+          <ScalarProperty Name="tough_billing_precentage" ColumnName="tough_billing_precentage" />
+          <ScalarProperty Name="htf_discount" ColumnName="htf_discount" />
+          <ScalarProperty Name="lami_discount" ColumnName="lami_discount" />
+          <ScalarProperty Name="lami_discount_precentage" ColumnName="lami_discount_precentage" />
+          <ScalarProperty Name="lami_billing_precentage" ColumnName="lami_billing_precentage" />
+          <ScalarProperty Name="lami_billing_amount" ColumnName="lami_billing_amount" />
+          <ScalarProperty Name="lami_total_amount" ColumnName="lami_total_amount" />
+          <ScalarProperty Name="sale_item_remarks" ColumnName="sale_item_remarks" />
+          <ScalarProperty Name="sale_item_date" ColumnName="sale_item_date" />
+          <ScalarProperty Name="price_list" ColumnName="price_list" />
+          <ScalarProperty Name="total_net_rate" ColumnName="total_net_rate" />
+          <ScalarProperty Name="netrate_billing_amount" ColumnName="netrate_billing_amount" />
+          <ScalarProperty Name="netrate_billing_precentage" ColumnName="netrate_billing_precentage" />
+          <ScalarProperty Name="gst_amount" ColumnName="gst_amount" />
+          <ScalarProperty Name="billing_grand_total" ColumnName="billing_grand_total" />
+          <ScalarProperty Name="total_weight" ColumnName="total_weight" />
+          <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+          <ScalarProperty Name="vehicle_number" ColumnName="vehicle_number" />
+          <ScalarProperty Name="driver_name" ColumnName="driver_name" />
+          <ScalarProperty Name="delivery_boy" ColumnName="delivery_boy" />
+          <ScalarProperty Name="made_by" ColumnName="made_by" />
+          <ScalarProperty Name="approved_by" ColumnName="approved_by" />
+          <ScalarProperty Name="order_status" ColumnName="order_status" />
+          <ScalarProperty Name="rejection_remarks" ColumnName="rejection_remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChallanItems">
+      <EntityTypeMapping TypeName="aasgwebModel.ChallanItem">
+        <MappingFragment StoreEntitySet="ChallanItem">
+          <ScalarProperty Name="challan_item_id" ColumnName="challan_item_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="loading_master_id" ColumnName="loading_master_id" />
+          <ScalarProperty Name="challan_header_id" ColumnName="challan_header_id" />
+          <ScalarProperty Name="sale_header_id" ColumnName="sale_header_id" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="sale_item_type_id" ColumnName="sale_item_type_id" />
+          <ScalarProperty Name="sale_item_type_title" ColumnName="sale_item_type_title" />
+          <ScalarProperty Name="sale_item_name" ColumnName="sale_item_name" />
+          <ScalarProperty Name="sale_item_quantity" ColumnName="sale_item_quantity" />
+          <ScalarProperty Name="sale_item_quantity_actual_load" ColumnName="sale_item_quantity_actual_load" />
+          <ScalarProperty Name="sale_item_price" ColumnName="sale_item_price" />
+          <ScalarProperty Name="sale_item_price_2" ColumnName="sale_item_price_2" />
+          <ScalarProperty Name="sale_item_net_price" ColumnName="sale_item_net_price" />
+          <ScalarProperty Name="item_weight" ColumnName="item_weight" />
+          <ScalarProperty Name="item_gst_percentage" ColumnName="item_gst_percentage" />
+          <ScalarProperty Name="item_unit" ColumnName="item_unit" />
+          <ScalarProperty Name="item_discount_percentage" ColumnName="item_discount_percentage" />
+          <ScalarProperty Name="item_discount_amount" ColumnName="item_discount_amount" />
+          <ScalarProperty Name="item_bill_percentage" ColumnName="item_bill_percentage" />
+          <ScalarProperty Name="item_amount" ColumnName="item_amount" />
+          <ScalarProperty Name="item_bill_rate" ColumnName="item_bill_rate" />
+          <ScalarProperty Name="item_bill_amount" ColumnName="item_bill_amount" />
+          <ScalarProperty Name="item_gst_amount" ColumnName="item_gst_amount" />
+          <ScalarProperty Name="item_final_amount" ColumnName="item_final_amount" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DraftMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.DraftMaster">
+        <MappingFragment StoreEntitySet="DraftMaster">
+          <ScalarProperty Name="draft_master_id" ColumnName="draft_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="production_id" ColumnName="production_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="parent_item_master_id" ColumnName="parent_item_master_id" />
+          <ScalarProperty Name="items_name" ColumnName="items_name" />
+          <ScalarProperty Name="left_over_size_availabel" ColumnName="left_over_size_availabel" />
+          <ScalarProperty Name="left_over_size" ColumnName="left_over_size" />
+          <ScalarProperty Name="draft_quantity" ColumnName="draft_quantity" />
+          <ScalarProperty Name="draft_status" ColumnName="draft_status" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DrawingMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.DrawingMaster">
+        <MappingFragment StoreEntitySet="DrawingMaster">
+          <ScalarProperty Name="drawing_master_id" ColumnName="drawing_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="selected_item_master_id" ColumnName="selected_item_master_id" />
+          <ScalarProperty Name="drawing_name" ColumnName="drawing_name" />
+          <ScalarProperty Name="drawing_type" ColumnName="drawing_type" />
+          <ScalarProperty Name="drawing_alias" ColumnName="drawing_alias" />
+          <ScalarProperty Name="drawing_description" ColumnName="drawing_description" />
+          <ScalarProperty Name="drawing_image" ColumnName="drawing_image" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DropdownMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.DropdownMaster">
+        <MappingFragment StoreEntitySet="DropdownMaster">
+          <ScalarProperty Name="dropdown_master_id" ColumnName="dropdown_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="dropdown_type" ColumnName="dropdown_type" />
+          <ScalarProperty Name="dropdown_item_name" ColumnName="dropdown_item_name" />
+          <ScalarProperty Name="dropdown_item_alias" ColumnName="dropdown_item_alias" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExceptionLogs">
+      <EntityTypeMapping TypeName="aasgwebModel.ExceptionLog">
+        <MappingFragment StoreEntitySet="ExceptionLog">
+          <ScalarProperty Name="exception_log_id" ColumnName="exception_log_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="exception_message" ColumnName="exception_message" />
+          <ScalarProperty Name="exception_log_date" ColumnName="exception_log_date" />
+          <ScalarProperty Name="exception_source" ColumnName="exception_source" />
+          <ScalarProperty Name="user_agent" ColumnName="user_agent" />
+          <ScalarProperty Name="trace_log" ColumnName="trace_log" />
+          <ScalarProperty Name="param_value" ColumnName="param_value" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeatureMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.FeatureMaster">
+        <MappingFragment StoreEntitySet="FeatureMaster">
+          <ScalarProperty Name="feature_master_id" ColumnName="feature_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="feature_name" ColumnName="feature_name" />
+          <ScalarProperty Name="feature_remarks" ColumnName="feature_remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FollowUps">
+      <EntityTypeMapping TypeName="aasgwebModel.FollowUp">
+        <MappingFragment StoreEntitySet="FollowUp">
+          <ScalarProperty Name="followup_id" ColumnName="followup_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="lead_header_id" ColumnName="lead_header_id" />
+          <ScalarProperty Name="followup_date" ColumnName="followup_date" />
+          <ScalarProperty Name="followup_text" ColumnName="followup_text" />
+          <ScalarProperty Name="next_followup_date" ColumnName="next_followup_date" />
+          <ScalarProperty Name="special_remarks" ColumnName="special_remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ItemMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.ItemMaster">
+        <MappingFragment StoreEntitySet="ItemMaster">
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="glass_color" ColumnName="glass_color" />
+          <ScalarProperty Name="hsn_code" ColumnName="hsn_code" />
+          <ScalarProperty Name="gst_rate" ColumnName="gst_rate" />
+          <ScalarProperty Name="item_height" ColumnName="item_height" />
+          <ScalarProperty Name="item_width" ColumnName="item_width" />
+          <ScalarProperty Name="actual_sqm" ColumnName="actual_sqm" />
+          <ScalarProperty Name="used_sqm" ColumnName="used_sqm" />
+          <ScalarProperty Name="thickness" ColumnName="thickness" />
+          <ScalarProperty Name="perimeter" ColumnName="perimeter" />
+          <ScalarProperty Name="plant_name" ColumnName="plant_name" />
+          <ScalarProperty Name="plant_no" ColumnName="plant_no" />
+          <ScalarProperty Name="diamond_required" ColumnName="diamond_required" />
+          <ScalarProperty Name="diamond_in_rs" ColumnName="diamond_in_rs" />
+          <ScalarProperty Name="rg_required" ColumnName="rg_required" />
+          <ScalarProperty Name="rg_in_rs" ColumnName="rg_in_rs" />
+          <ScalarProperty Name="washing_one" ColumnName="washing_one" />
+          <ScalarProperty Name="hole_required" ColumnName="hole_required" />
+          <ScalarProperty Name="number_of_holes" ColumnName="number_of_holes" />
+          <ScalarProperty Name="diameter" ColumnName="diameter" />
+          <ScalarProperty Name="washing_two" ColumnName="washing_two" />
+          <ScalarProperty Name="is_normal_paint" ColumnName="is_normal_paint" />
+          <ScalarProperty Name="normal_paint_quantity" ColumnName="normal_paint_quantity" />
+          <ScalarProperty Name="normal_paint_rs" ColumnName="normal_paint_rs" />
+          <ScalarProperty Name="is_black_paint" ColumnName="is_black_paint" />
+          <ScalarProperty Name="black_paint_quantity" ColumnName="black_paint_quantity" />
+          <ScalarProperty Name="black_paint_rs" ColumnName="black_paint_rs" />
+          <ScalarProperty Name="is_dfg_paint" ColumnName="is_dfg_paint" />
+          <ScalarProperty Name="dfg_paint_quantity" ColumnName="dfg_paint_quantity" />
+          <ScalarProperty Name="dfg_paint_rs" ColumnName="dfg_paint_rs" />
+          <ScalarProperty Name="is_thinner_paint" ColumnName="is_thinner_paint" />
+          <ScalarProperty Name="thinner_paint_quantity" ColumnName="thinner_paint_quantity" />
+          <ScalarProperty Name="thinner_paint_rs" ColumnName="thinner_paint_rs" />
+          <ScalarProperty Name="pre_processing_breakage_level" ColumnName="pre_processing_breakage_level" />
+          <ScalarProperty Name="processing_breakage_level" ColumnName="processing_breakage_level" />
+          <ScalarProperty Name="polish_required" ColumnName="polish_required" />
+          <ScalarProperty Name="polish_in_rs" ColumnName="polish_in_rs" />
+          <ScalarProperty Name="connector_type" ColumnName="connector_type" />
+          <ScalarProperty Name="connector_price" ColumnName="connector_price" />
+          <ScalarProperty Name="is_doorclip_required" ColumnName="is_doorclip_required" />
+          <ScalarProperty Name="doorclip_type" ColumnName="doorclip_type" />
+          <ScalarProperty Name="doorclip_rate" ColumnName="doorclip_rate" />
+          <ScalarProperty Name="packing_polythin_required" ColumnName="packing_polythin_required" />
+          <ScalarProperty Name="packing_in_rs" ColumnName="packing_in_rs" />
+          <ScalarProperty Name="packing_paper_required" ColumnName="packing_paper_required" />
+          <ScalarProperty Name="packing_paper_quantity" ColumnName="packing_paper_quantity" />
+          <ScalarProperty Name="stock_max_level" ColumnName="stock_max_level" />
+          <ScalarProperty Name="item_weight" ColumnName="item_weight" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="price_2" ColumnName="price_2" />
+          <ScalarProperty Name="price_type" ColumnName="price_type" />
+          <ScalarProperty Name="mm_sqm" ColumnName="mm_sqm" />
+          <ScalarProperty Name="first_dop" ColumnName="first_dop" />
+          <ScalarProperty Name="last_dop" ColumnName="last_dop" />
+          <ScalarProperty Name="segment" ColumnName="segment" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+          <ScalarProperty Name="clear_focus" ColumnName="clear_focus" />
+          <ScalarProperty Name="max_stock_level_apr_20" ColumnName="max_stock_level_apr_20" />
+          <ScalarProperty Name="max_stock_level_may_21" ColumnName="max_stock_level_may_21" />
+          <ScalarProperty Name="max_stock_level_jan_21" ColumnName="max_stock_level_jan_21" />
+          <ScalarProperty Name="q1_2021" ColumnName="q1_2021" />
+          <ScalarProperty Name="q2_2021" ColumnName="q2_2021" />
+          <ScalarProperty Name="q3_2021" ColumnName="q3_2021" />
+          <ScalarProperty Name="q4_2021" ColumnName="q4_2021" />
+          <ScalarProperty Name="pre_processing" ColumnName="pre_processing" />
+          <ScalarProperty Name="during_processing" ColumnName="during_processing" />
+          <ScalarProperty Name="factory_ready_stock" ColumnName="factory_ready_stock" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeadHeaders">
+      <EntityTypeMapping TypeName="aasgwebModel.LeadHeader">
+        <MappingFragment StoreEntitySet="LeadHeader">
+          <ScalarProperty Name="lead_header_id" ColumnName="lead_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="party_name" ColumnName="party_name" />
+          <ScalarProperty Name="party_contact_person" ColumnName="party_contact_person" />
+          <ScalarProperty Name="party_phoneno" ColumnName="party_phoneno" />
+          <ScalarProperty Name="followup_date" ColumnName="followup_date" />
+          <ScalarProperty Name="lead_remarks" ColumnName="lead_remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadingMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.LoadingMaster">
+        <MappingFragment StoreEntitySet="LoadingMaster">
+          <ScalarProperty Name="loading_master_id" ColumnName="loading_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="sale_header_id" ColumnName="sale_header_id" />
+          <ScalarProperty Name="order_number" ColumnName="order_number" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="sale_item_type_id" ColumnName="sale_item_type_id" />
+          <ScalarProperty Name="sale_item_type_title" ColumnName="sale_item_type_title" />
+          <ScalarProperty Name="sale_item_name" ColumnName="sale_item_name" />
+          <ScalarProperty Name="sale_item_quantity" ColumnName="sale_item_quantity" />
+          <ScalarProperty Name="sale_item_price" ColumnName="sale_item_price" />
+          <ScalarProperty Name="item_weight" ColumnName="item_weight" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MenuMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.MenuMaster">
+        <MappingFragment StoreEntitySet="MenuMaster">
+          <ScalarProperty Name="menu_master_id" ColumnName="menu_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="display_name" ColumnName="display_name" />
+          <ScalarProperty Name="page_url" ColumnName="page_url" />
+          <ScalarProperty Name="parent_id" ColumnName="parent_id" />
+          <ScalarProperty Name="parent_order" ColumnName="parent_order" />
+          <ScalarProperty Name="child_order" ColumnName="child_order" />
+          <ScalarProperty Name="cssclass" ColumnName="cssclass" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OnFloorItemMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.OnFloorItemMaster">
+        <MappingFragment StoreEntitySet="OnFloorItemMaster">
+          <ScalarProperty Name="on_floor_item_master_id" ColumnName="on_floor_item_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="production_id" ColumnName="production_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="parent_item_master_id" ColumnName="parent_item_master_id" />
+          <ScalarProperty Name="on_floor_items_master_id" ColumnName="on_floor_items_master_id" />
+          <ScalarProperty Name="items_name" ColumnName="items_name" />
+          <ScalarProperty Name="items_type" ColumnName="items_type" />
+          <ScalarProperty Name="broken_sheet_size" ColumnName="broken_sheet_size" />
+          <ScalarProperty Name="broken_sheet_quantity" ColumnName="broken_sheet_quantity" />
+          <ScalarProperty Name="per_broken_sheet_quantity" ColumnName="per_broken_sheet_quantity" />
+          <ScalarProperty Name="per_broken_sheet_quantity_expected" ColumnName="per_broken_sheet_quantity_expected" />
+          <ScalarProperty Name="items_pcs_quantity" ColumnName="items_pcs_quantity" />
+          <ScalarProperty Name="left_over_size_availabel" ColumnName="left_over_size_availabel" />
+          <ScalarProperty Name="left_over_size" ColumnName="left_over_size" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartyMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.PartyMaster">
+        <MappingFragment StoreEntitySet="PartyMaster">
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="party_name" ColumnName="party_name" />
+          <ScalarProperty Name="party_contact_person" ColumnName="party_contact_person" />
+          <ScalarProperty Name="party_phoneno" ColumnName="party_phoneno" />
+          <ScalarProperty Name="party_email" ColumnName="party_email" />
+          <ScalarProperty Name="party_gst" ColumnName="party_gst" />
+          <ScalarProperty Name="party_address" ColumnName="party_address" />
+          <ScalarProperty Name="party_state" ColumnName="party_state" />
+          <ScalarProperty Name="party_city" ColumnName="party_city" />
+          <ScalarProperty Name="party_pincode" ColumnName="party_pincode" />
+          <ScalarProperty Name="party_region" ColumnName="party_region" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="tough_discount_precentage" ColumnName="tough_discount_precentage" />
+          <ScalarProperty Name="tough_billing_precentage" ColumnName="tough_billing_precentage" />
+          <ScalarProperty Name="lami_discount_precentage" ColumnName="lami_discount_precentage" />
+          <ScalarProperty Name="lami_billing_precentage" ColumnName="lami_billing_precentage" />
+          <ScalarProperty Name="netrate_billing_precentage" ColumnName="netrate_billing_precentage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessCuttings">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessCutting">
+        <MappingFragment StoreEntitySet="ProcessCutting">
+          <ScalarProperty Name="process_cutting_id" ColumnName="process_cutting_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="kept_on_floor_item_status" ColumnName="kept_on_floor_item_status" />
+          <ScalarProperty Name="kept_on_floor_item_master_id" ColumnName="kept_on_floor_item_master_id" />
+          <ScalarProperty Name="kept_on_floor_item_pcs_quantity" ColumnName="kept_on_floor_item_pcs_quantity" />
+          <ScalarProperty Name="kept_on_floor_item_pcs_received" ColumnName="kept_on_floor_item_pcs_received" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="cutting_started_on" ColumnName="cutting_started_on" />
+          <ScalarProperty Name="cutting_ended_on" ColumnName="cutting_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="item_height" ColumnName="item_height" />
+          <ScalarProperty Name="item_width" ColumnName="item_width" />
+          <ScalarProperty Name="sheet_size" ColumnName="sheet_size" />
+          <ScalarProperty Name="sheet_height" ColumnName="sheet_height" />
+          <ScalarProperty Name="sheet_width" ColumnName="sheet_width" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="cutting_status" ColumnName="cutting_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessDfgPrints">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessDfgPrint">
+        <MappingFragment StoreEntitySet="ProcessDfgPrint">
+          <ScalarProperty Name="process_dfg_print_id" ColumnName="process_dfg_print_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="dfg_print_started_on" ColumnName="dfg_print_started_on" />
+          <ScalarProperty Name="dfg_print_ended_on" ColumnName="dfg_print_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="dfg_status" ColumnName="dfg_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessGrindings">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessGrinding">
+        <MappingFragment StoreEntitySet="ProcessGrinding">
+          <ScalarProperty Name="process_grinding_id" ColumnName="process_grinding_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="grinding_started_on" ColumnName="grinding_started_on" />
+          <ScalarProperty Name="grinding_ended_on" ColumnName="grinding_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="grinding_status" ColumnName="grinding_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessHoles">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessHole">
+        <MappingFragment StoreEntitySet="ProcessHole">
+          <ScalarProperty Name="process_hole_id" ColumnName="process_hole_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="hole_started_on" ColumnName="hole_started_on" />
+          <ScalarProperty Name="hole_ended_on" ColumnName="hole_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="hole_status" ColumnName="hole_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessPackagings">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessPackaging">
+        <MappingFragment StoreEntitySet="ProcessPackaging">
+          <ScalarProperty Name="process_packaging_id" ColumnName="process_packaging_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="packaging_started_on" ColumnName="packaging_started_on" />
+          <ScalarProperty Name="packaging_ended_on" ColumnName="packaging_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="packaging_status" ColumnName="packaging_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessPaints">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessPaint">
+        <MappingFragment StoreEntitySet="ProcessPaint">
+          <ScalarProperty Name="process_paint_id" ColumnName="process_paint_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="paint_started_on" ColumnName="paint_started_on" />
+          <ScalarProperty Name="paint_ended_on" ColumnName="paint_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="paint_status" ColumnName="paint_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessStores">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessStore">
+        <MappingFragment StoreEntitySet="ProcessStore">
+          <ScalarProperty Name="process_store_id" ColumnName="process_store_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="store_started_on" ColumnName="store_started_on" />
+          <ScalarProperty Name="store_ended_on" ColumnName="store_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="store_status" ColumnName="store_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessTemperings">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessTempering">
+        <MappingFragment StoreEntitySet="ProcessTempering">
+          <ScalarProperty Name="process_tempering_id" ColumnName="process_tempering_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="tempering_started_on" ColumnName="tempering_started_on" />
+          <ScalarProperty Name="tempering_ended_on" ColumnName="tempering_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="tempering_status" ColumnName="tempering_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessTemperingReports">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessTemperingReport">
+        <MappingFragment StoreEntitySet="ProcessTemperingReport">
+          <ScalarProperty Name="process_tempering_report_id" ColumnName="process_tempering_report_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="process_tempering_id" ColumnName="process_tempering_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="report_date" ColumnName="report_date" />
+          <ScalarProperty Name="htf_shift_from" ColumnName="htf_shift_from" />
+          <ScalarProperty Name="htf_shift_to" ColumnName="htf_shift_to" />
+          <ScalarProperty Name="plant_number" ColumnName="plant_number" />
+          <ScalarProperty Name="report_shift" ColumnName="report_shift" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="quantity_in_pcs" ColumnName="quantity_in_pcs" />
+          <ScalarProperty Name="production_target_in_pcs" ColumnName="production_target_in_pcs" />
+          <ScalarProperty Name="production_target_in_percentage" ColumnName="production_target_in_percentage" />
+          <ScalarProperty Name="heating_on" ColumnName="heating_on" />
+          <ScalarProperty Name="furnace_meter_on_heating" ColumnName="furnace_meter_on_heating" />
+          <ScalarProperty Name="big_blower_on_heating" ColumnName="big_blower_on_heating" />
+          <ScalarProperty Name="small_blower_on_heating" ColumnName="small_blower_on_heating" />
+          <ScalarProperty Name="production_start" ColumnName="production_start" />
+          <ScalarProperty Name="furnace_meter_start_production" ColumnName="furnace_meter_start_production" />
+          <ScalarProperty Name="big_blower_start_production" ColumnName="big_blower_start_production" />
+          <ScalarProperty Name="small_blower_start_production" ColumnName="small_blower_start_production" />
+          <ScalarProperty Name="production_finish" ColumnName="production_finish" />
+          <ScalarProperty Name="furnace_meter_finish_production" ColumnName="furnace_meter_finish_production" />
+          <ScalarProperty Name="big_blower_finish_production" ColumnName="big_blower_finish_production" />
+          <ScalarProperty Name="small_blower_finish_production" ColumnName="small_blower_finish_production" />
+          <ScalarProperty Name="operator_name" ColumnName="operator_name" />
+          <ScalarProperty Name="line_incharge" ColumnName="line_incharge" />
+          <ScalarProperty Name="helper_name" ColumnName="helper_name" />
+          <ScalarProperty Name="supervisor_name" ColumnName="supervisor_name" />
+          <ScalarProperty Name="hour_name" ColumnName="hour_name" />
+          <ScalarProperty Name="item_verify_status" ColumnName="item_verify_status" />
+          <ScalarProperty Name="ok_total_pcs_in_hours" ColumnName="ok_total_pcs_in_hours" />
+          <ScalarProperty Name="breakage_total_pcs" ColumnName="breakage_total_pcs" />
+          <ScalarProperty Name="reject_total_pcs" ColumnName="reject_total_pcs" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="item_average_hours_cost" ColumnName="item_average_hours_cost" />
+          <ScalarProperty Name="item_raw_balance" ColumnName="item_raw_balance" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessWashings">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessWashing">
+        <MappingFragment StoreEntitySet="ProcessWashing">
+          <ScalarProperty Name="process_washing_id" ColumnName="process_washing_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="washing_started_on" ColumnName="washing_started_on" />
+          <ScalarProperty Name="washing_ended_on" ColumnName="washing_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="washing_status" ColumnName="washing_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessWashingOnes">
+      <EntityTypeMapping TypeName="aasgwebModel.ProcessWashingOne">
+        <MappingFragment StoreEntitySet="ProcessWashingOne">
+          <ScalarProperty Name="process_washing_one_id" ColumnName="process_washing_one_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="washing_started_on" ColumnName="washing_started_on" />
+          <ScalarProperty Name="washing_ended_on" ColumnName="washing_ended_on" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="breakage_pcs_number" ColumnName="breakage_pcs_number" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_pcs_number" ColumnName="reject_pcs_number" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="washing_one_status" ColumnName="washing_one_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productions">
+      <EntityTypeMapping TypeName="aasgwebModel.Production">
+        <MappingFragment StoreEntitySet="Production">
+          <ScalarProperty Name="production_id" ColumnName="production_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="sheet_size" ColumnName="sheet_size" />
+          <ScalarProperty Name="no_of_sheets_issue" ColumnName="no_of_sheets_issue" />
+          <ScalarProperty Name="quantity_per_sheet" ColumnName="quantity_per_sheet" />
+          <ScalarProperty Name="total_expectation" ColumnName="total_expectation" />
+          <ScalarProperty Name="drawing_master_id" ColumnName="drawing_master_id" />
+          <ScalarProperty Name="kept_on_floor_item_status" ColumnName="kept_on_floor_item_status" />
+          <ScalarProperty Name="kept_on_floor_item_master_id" ColumnName="kept_on_floor_item_master_id" />
+          <ScalarProperty Name="kept_on_floor_item_pcs_quantity" ColumnName="kept_on_floor_item_pcs_quantity" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="order_quantity" ColumnName="order_quantity" />
+          <ScalarProperty Name="overall_total_item" ColumnName="overall_total_item" />
+          <ScalarProperty Name="factory_stock" ColumnName="factory_stock" />
+          <ScalarProperty Name="shortage" ColumnName="shortage" />
+          <ScalarProperty Name="stock_max_level" ColumnName="stock_max_level" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="production_plant" ColumnName="production_plant" />
+          <ScalarProperty Name="production_status" ColumnName="production_status" />
+          <ScalarProperty Name="production_shift" ColumnName="production_shift" />
+          <ScalarProperty Name="started_on" ColumnName="started_on" />
+          <ScalarProperty Name="planned_date" ColumnName="planned_date" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="batch_status" ColumnName="batch_status" />
+          <ScalarProperty Name="cutting_id" ColumnName="cutting_id" />
+          <ScalarProperty Name="cutting_quantity" ColumnName="cutting_quantity" />
+          <ScalarProperty Name="is_under_cutting" ColumnName="is_under_cutting" />
+          <ScalarProperty Name="grinding_id" ColumnName="grinding_id" />
+          <ScalarProperty Name="grinding_quantity" ColumnName="grinding_quantity" />
+          <ScalarProperty Name="is_under_grinding" ColumnName="is_under_grinding" />
+          <ScalarProperty Name="washing_one_id" ColumnName="washing_one_id" />
+          <ScalarProperty Name="washing_one_quantity" ColumnName="washing_one_quantity" />
+          <ScalarProperty Name="is_under_washing_one" ColumnName="is_under_washing_one" />
+          <ScalarProperty Name="hole_id" ColumnName="hole_id" />
+          <ScalarProperty Name="hole_quantity" ColumnName="hole_quantity" />
+          <ScalarProperty Name="is_under_hole" ColumnName="is_under_hole" />
+          <ScalarProperty Name="washing_id" ColumnName="washing_id" />
+          <ScalarProperty Name="washing_quantity" ColumnName="washing_quantity" />
+          <ScalarProperty Name="is_under_washing" ColumnName="is_under_washing" />
+          <ScalarProperty Name="paint_id" ColumnName="paint_id" />
+          <ScalarProperty Name="paint_quantity" ColumnName="paint_quantity" />
+          <ScalarProperty Name="is_under_paint" ColumnName="is_under_paint" />
+          <ScalarProperty Name="dfg_print_id" ColumnName="dfg_print_id" />
+          <ScalarProperty Name="dfg_print_quantity" ColumnName="dfg_print_quantity" />
+          <ScalarProperty Name="is_under_dfg_print" ColumnName="is_under_dfg_print" />
+          <ScalarProperty Name="tempering_id" ColumnName="tempering_id" />
+          <ScalarProperty Name="tempering_quantity" ColumnName="tempering_quantity" />
+          <ScalarProperty Name="is_under_tempering" ColumnName="is_under_tempering" />
+          <ScalarProperty Name="packing_id" ColumnName="packing_id" />
+          <ScalarProperty Name="packing_quantity" ColumnName="packing_quantity" />
+          <ScalarProperty Name="is_under_packing" ColumnName="is_under_packing" />
+          <ScalarProperty Name="store_id" ColumnName="store_id" />
+          <ScalarProperty Name="store_quantity" ColumnName="store_quantity" />
+          <ScalarProperty Name="is_under_store" ColumnName="is_under_store" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="production_planning_id" ColumnName="production_planning_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductionPlannings">
+      <EntityTypeMapping TypeName="aasgwebModel.ProductionPlanning">
+        <MappingFragment StoreEntitySet="ProductionPlanning">
+          <ScalarProperty Name="production_planning_id" ColumnName="production_planning_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="order_quantity" ColumnName="order_quantity" />
+          <ScalarProperty Name="overall_total_item" ColumnName="overall_total_item" />
+          <ScalarProperty Name="factory_stock" ColumnName="factory_stock" />
+          <ScalarProperty Name="shortage" ColumnName="shortage" />
+          <ScalarProperty Name="stock_max_level" ColumnName="stock_max_level" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductionTrails">
+      <EntityTypeMapping TypeName="aasgwebModel.ProductionTrail">
+        <MappingFragment StoreEntitySet="ProductionTrail">
+          <ScalarProperty Name="production_trail_id" ColumnName="production_trail_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="production_id" ColumnName="production_id" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="process_name" ColumnName="process_name" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="heading" ColumnName="heading" />
+          <ScalarProperty Name="heading_class" ColumnName="heading_class" />
+          <ScalarProperty Name="activity" ColumnName="activity" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+          <ScalarProperty Name="icon_class" ColumnName="icon_class" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseHeaders">
+      <EntityTypeMapping TypeName="aasgwebModel.PurchaseHeader">
+        <MappingFragment StoreEntitySet="PurchaseHeader">
+          <ScalarProperty Name="purchase_header_id" ColumnName="purchase_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="supplier_master_id" ColumnName="supplier_master_id" />
+          <ScalarProperty Name="purchase_items_quantity" ColumnName="purchase_items_quantity" />
+          <ScalarProperty Name="purchase_items_total_amount" ColumnName="purchase_items_total_amount" />
+          <ScalarProperty Name="purchase_items_payment_by" ColumnName="purchase_items_payment_by" />
+          <ScalarProperty Name="purchase_items_reference_number" ColumnName="purchase_items_reference_number" />
+          <ScalarProperty Name="purchase_items_pay_amount" ColumnName="purchase_items_pay_amount" />
+          <ScalarProperty Name="purchase_items_pending_amount" ColumnName="purchase_items_pending_amount" />
+          <ScalarProperty Name="purchase_item_discount" ColumnName="purchase_item_discount" />
+          <ScalarProperty Name="purchase_item_remarks" ColumnName="purchase_item_remarks" />
+          <ScalarProperty Name="purchase_item_date" ColumnName="purchase_item_date" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseItems">
+      <EntityTypeMapping TypeName="aasgwebModel.PurchaseItem">
+        <MappingFragment StoreEntitySet="PurchaseItem">
+          <ScalarProperty Name="purchase_item_id" ColumnName="purchase_item_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="purchase_header_id" ColumnName="purchase_header_id" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="supplier_master_id" ColumnName="supplier_master_id" />
+          <ScalarProperty Name="purchase_item_type_id" ColumnName="purchase_item_type_id" />
+          <ScalarProperty Name="purchase_item_name" ColumnName="purchase_item_name" />
+          <ScalarProperty Name="purchase_item_quantity" ColumnName="purchase_item_quantity" />
+          <ScalarProperty Name="purchase_item_price" ColumnName="purchase_item_price" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleHeaders">
+      <EntityTypeMapping TypeName="aasgwebModel.SaleHeader">
+        <MappingFragment StoreEntitySet="SaleHeader">
+          <ScalarProperty Name="sale_header_id" ColumnName="sale_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="order_number" ColumnName="order_number" />
+          <ScalarProperty Name="total_items" ColumnName="total_items" />
+          <ScalarProperty Name="total_amount_billed" ColumnName="total_amount_billed" />
+          <ScalarProperty Name="total_amount_cash" ColumnName="total_amount_cash" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+          <ScalarProperty Name="tough_discount_precentage" ColumnName="tough_discount_precentage" />
+          <ScalarProperty Name="tough_discount" ColumnName="tough_discount" />
+          <ScalarProperty Name="tough_total_amount" ColumnName="tough_total_amount" />
+          <ScalarProperty Name="tough_billing_amount" ColumnName="tough_billing_amount" />
+          <ScalarProperty Name="tough_billing_precentage" ColumnName="tough_billing_precentage" />
+          <ScalarProperty Name="htf_discount" ColumnName="htf_discount" />
+          <ScalarProperty Name="lami_discount" ColumnName="lami_discount" />
+          <ScalarProperty Name="lami_discount_precentage" ColumnName="lami_discount_precentage" />
+          <ScalarProperty Name="lami_billing_precentage" ColumnName="lami_billing_precentage" />
+          <ScalarProperty Name="lami_billing_amount" ColumnName="lami_billing_amount" />
+          <ScalarProperty Name="lami_total_amount" ColumnName="lami_total_amount" />
+          <ScalarProperty Name="sale_item_remarks" ColumnName="sale_item_remarks" />
+          <ScalarProperty Name="sale_item_date" ColumnName="sale_item_date" />
+          <ScalarProperty Name="price_list" ColumnName="price_list" />
+          <ScalarProperty Name="total_net_rate" ColumnName="total_net_rate" />
+          <ScalarProperty Name="netrate_billing_amount" ColumnName="netrate_billing_amount" />
+          <ScalarProperty Name="netrate_billing_precentage" ColumnName="netrate_billing_precentage" />
+          <ScalarProperty Name="gst_amount" ColumnName="gst_amount" />
+          <ScalarProperty Name="billing_grand_total" ColumnName="billing_grand_total" />
+          <ScalarProperty Name="total_weight" ColumnName="total_weight" />
+          <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+          <ScalarProperty Name="made_by" ColumnName="made_by" />
+          <ScalarProperty Name="approved_by" ColumnName="approved_by" />
+          <ScalarProperty Name="order_status" ColumnName="order_status" />
+          <ScalarProperty Name="rejection_remarks" ColumnName="rejection_remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleItems">
+      <EntityTypeMapping TypeName="aasgwebModel.SaleItem">
+        <MappingFragment StoreEntitySet="SaleItem">
+          <ScalarProperty Name="sale_item_id" ColumnName="sale_item_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="sale_header_id" ColumnName="sale_header_id" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="sale_item_type_id" ColumnName="sale_item_type_id" />
+          <ScalarProperty Name="sale_item_type_title" ColumnName="sale_item_type_title" />
+          <ScalarProperty Name="sale_item_name" ColumnName="sale_item_name" />
+          <ScalarProperty Name="sale_item_quantity" ColumnName="sale_item_quantity" />
+          <ScalarProperty Name="sale_item_price" ColumnName="sale_item_price" />
+          <ScalarProperty Name="sale_item_price_2" ColumnName="sale_item_price_2" />
+          <ScalarProperty Name="sale_item_net_price" ColumnName="sale_item_net_price" />
+          <ScalarProperty Name="item_weight" ColumnName="item_weight" />
+          <ScalarProperty Name="item_gst_percentage" ColumnName="item_gst_percentage" />
+          <ScalarProperty Name="item_unit" ColumnName="item_unit" />
+          <ScalarProperty Name="item_discount_percentage" ColumnName="item_discount_percentage" />
+          <ScalarProperty Name="item_discount_amount" ColumnName="item_discount_amount" />
+          <ScalarProperty Name="item_bill_percentage" ColumnName="item_bill_percentage" />
+          <ScalarProperty Name="item_amount" ColumnName="item_amount" />
+          <ScalarProperty Name="item_bill_rate" ColumnName="item_bill_rate" />
+          <ScalarProperty Name="item_bill_amount" ColumnName="item_bill_amount" />
+          <ScalarProperty Name="item_gst_amount" ColumnName="item_gst_amount" />
+          <ScalarProperty Name="item_final_amount" ColumnName="item_final_amount" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StaffMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.StaffMaster">
+        <MappingFragment StoreEntitySet="StaffMaster">
+          <ScalarProperty Name="staff_master_id" ColumnName="staff_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="staff_employee_id" ColumnName="staff_employee_id" />
+          <ScalarProperty Name="user_role_id" ColumnName="user_role_id" />
+          <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+          <ScalarProperty Name="staff_phoneNo" ColumnName="staff_phoneNo" />
+          <ScalarProperty Name="staff_email" ColumnName="staff_email" />
+          <ScalarProperty Name="staff_password" ColumnName="staff_password" />
+          <ScalarProperty Name="staff_designation_id" ColumnName="staff_designation_id" />
+          <ScalarProperty Name="staff_joinning_date" ColumnName="staff_joinning_date" />
+          <ScalarProperty Name="staff_grade_id" ColumnName="staff_grade_id" />
+          <ScalarProperty Name="staff_current_address" ColumnName="staff_current_address" />
+          <ScalarProperty Name="staff_current_city" ColumnName="staff_current_city" />
+          <ScalarProperty Name="staff_current_state" ColumnName="staff_current_state" />
+          <ScalarProperty Name="staff_current_pincode" ColumnName="staff_current_pincode" />
+          <ScalarProperty Name="staff_permanent_address" ColumnName="staff_permanent_address" />
+          <ScalarProperty Name="staff_permanent_city" ColumnName="staff_permanent_city" />
+          <ScalarProperty Name="staff_permanent_state" ColumnName="staff_permanent_state" />
+          <ScalarProperty Name="staff_permanent_pincode" ColumnName="staff_permanent_pincode" />
+          <ScalarProperty Name="staff_bankname" ColumnName="staff_bankname" />
+          <ScalarProperty Name="staff_account_number" ColumnName="staff_account_number" />
+          <ScalarProperty Name="staff_ifsc_number" ColumnName="staff_ifsc_number" />
+          <ScalarProperty Name="staff_pancard_number" ColumnName="staff_pancard_number" />
+          <ScalarProperty Name="staff_pancard_image" ColumnName="staff_pancard_image" />
+          <ScalarProperty Name="staff_aadhar_number" ColumnName="staff_aadhar_number" />
+          <ScalarProperty Name="staff_aadhar_front" ColumnName="staff_aadhar_front" />
+          <ScalarProperty Name="staff_aadhar_back" ColumnName="staff_aadhar_back" />
+          <ScalarProperty Name="last_order_date" ColumnName="last_order_date" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockIssuanceHeaders">
+      <EntityTypeMapping TypeName="aasgwebModel.StockIssuanceHeader">
+        <MappingFragment StoreEntitySet="StockIssuanceHeader">
+          <ScalarProperty Name="stock_issuance_header_id" ColumnName="stock_issuance_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="items_total_quantity" ColumnName="items_total_quantity" />
+          <ScalarProperty Name="items_total_amount" ColumnName="items_total_amount" />
+          <ScalarProperty Name="item_remarks" ColumnName="item_remarks" />
+          <ScalarProperty Name="item_require_date" ColumnName="item_require_date" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockIssuanceItems">
+      <EntityTypeMapping TypeName="aasgwebModel.StockIssuanceItem">
+        <MappingFragment StoreEntitySet="StockIssuanceItem">
+          <ScalarProperty Name="stock_issuance_item_id" ColumnName="stock_issuance_item_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="stock_issuance_header_id" ColumnName="stock_issuance_header_id" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="item_quantity" ColumnName="item_quantity" />
+          <ScalarProperty Name="item_amount" ColumnName="item_amount" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockLedgers">
+      <EntityTypeMapping TypeName="aasgwebModel.StockLedger">
+        <MappingFragment StoreEntitySet="StockLedger">
+          <ScalarProperty Name="stock_ledger_id" ColumnName="stock_ledger_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="purchase_header_id" ColumnName="purchase_header_id" />
+          <ScalarProperty Name="purchase_invoice_number" ColumnName="purchase_invoice_number" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="purchase_item_name" ColumnName="purchase_item_name" />
+          <ScalarProperty Name="purchase_item_quantity" ColumnName="purchase_item_quantity" />
+          <ScalarProperty Name="purchase_item_received_quantity" ColumnName="purchase_item_received_quantity" />
+          <ScalarProperty Name="purchase_item_remarks" ColumnName="purchase_item_remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.SupplierMaster">
+        <MappingFragment StoreEntitySet="SupplierMaster">
+          <ScalarProperty Name="supplier_master_id" ColumnName="supplier_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="supplier_name" ColumnName="supplier_name" />
+          <ScalarProperty Name="supplier_contact_person" ColumnName="supplier_contact_person" />
+          <ScalarProperty Name="supplier_phoneno" ColumnName="supplier_phoneno" />
+          <ScalarProperty Name="supplier_email" ColumnName="supplier_email" />
+          <ScalarProperty Name="supplier_gst" ColumnName="supplier_gst" />
+          <ScalarProperty Name="supplier_address" ColumnName="supplier_address" />
+          <ScalarProperty Name="supplier_state" ColumnName="supplier_state" />
+          <ScalarProperty Name="supplier_city" ColumnName="supplier_city" />
+          <ScalarProperty Name="supplier_pincode" ColumnName="supplier_pincode" />
+          <ScalarProperty Name="supplier_region" ColumnName="supplier_region" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourExpenseHeaders">
+      <EntityTypeMapping TypeName="aasgwebModel.TourExpenseHeader">
+        <MappingFragment StoreEntitySet="TourExpenseHeader">
+          <ScalarProperty Name="tour_expense_header_id" ColumnName="tour_expense_header_id" />
+          <ScalarProperty Name="tour_master_id" ColumnName="tour_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="tour_name" ColumnName="tour_name" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="expense_food_total" ColumnName="expense_food_total" />
+          <ScalarProperty Name="expense_hotel_total" ColumnName="expense_hotel_total" />
+          <ScalarProperty Name="expense_conveyance_total" ColumnName="expense_conveyance_total" />
+          <ScalarProperty Name="expense_misc_total" ColumnName="expense_misc_total" />
+          <ScalarProperty Name="expense_total" ColumnName="expense_total" />
+          <ScalarProperty Name="expense_total_approved" ColumnName="expense_total_approved" />
+          <ScalarProperty Name="approved_by" ColumnName="approved_by" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="is_paid" ColumnName="is_paid" />
+          <ScalarProperty Name="payment_mode" ColumnName="payment_mode" />
+          <ScalarProperty Name="payment_ref_number" ColumnName="payment_ref_number" />
+          <ScalarProperty Name="payment_made" ColumnName="payment_made" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourExpenseItems">
+      <EntityTypeMapping TypeName="aasgwebModel.TourExpenseItem">
+        <MappingFragment StoreEntitySet="TourExpenseItem">
+          <ScalarProperty Name="tour_expense_item_id" ColumnName="tour_expense_item_id" />
+          <ScalarProperty Name="tour_expense_header_id" ColumnName="tour_expense_header_id" />
+          <ScalarProperty Name="tour_master_id" ColumnName="tour_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="expense_date" ColumnName="expense_date" />
+          <ScalarProperty Name="expense_food" ColumnName="expense_food" />
+          <ScalarProperty Name="expense_hotel" ColumnName="expense_hotel" />
+          <ScalarProperty Name="expense_conveyance" ColumnName="expense_conveyance" />
+          <ScalarProperty Name="expense_misc" ColumnName="expense_misc" />
+          <ScalarProperty Name="expense_total_item" ColumnName="expense_total_item" />
+          <ScalarProperty Name="expense_total_approved_item" ColumnName="expense_total_approved_item" />
+          <ScalarProperty Name="approved_by" ColumnName="approved_by" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="expense_image" ColumnName="expense_image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourGradeMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.TourGradeMaster">
+        <MappingFragment StoreEntitySet="TourGradeMaster">
+          <ScalarProperty Name="tourgrade_master_id" ColumnName="tourgrade_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="tourgrade_name" ColumnName="tourgrade_name" />
+          <ScalarProperty Name="tourgrade_perday_transport" ColumnName="tourgrade_perday_transport" />
+          <ScalarProperty Name="tourgrade_perday_food" ColumnName="tourgrade_perday_food" />
+          <ScalarProperty Name="tourgrade_perday_hotel" ColumnName="tourgrade_perday_hotel" />
+          <ScalarProperty Name="tourgrade_perday_misc" ColumnName="tourgrade_perday_misc" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TourMasters">
+      <EntityTypeMapping TypeName="aasgwebModel.TourMaster">
+        <MappingFragment StoreEntitySet="TourMaster">
+          <ScalarProperty Name="tour_master_id" ColumnName="tour_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="tour_name" ColumnName="tour_name" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="staff_master_id" ColumnName="staff_master_id" />
+          <ScalarProperty Name="tour_numberofdays" ColumnName="tour_numberofdays" />
+          <ScalarProperty Name="tour_agenda" ColumnName="tour_agenda" />
+          <ScalarProperty Name="tour_status" ColumnName="tour_status" />
+          <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+          <ScalarProperty Name="is_approved" ColumnName="is_approved" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="aasgwebModel.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="user_role_id" ColumnName="user_role_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="user_role_name" ColumnName="user_role_name" />
+          <ScalarProperty Name="assigned_menu_ids" ColumnName="assigned_menu_ids" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="assigned_feature_ids" ColumnName="assigned_feature_ids" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xp_CustomerRequestHeader">
+      <EntityTypeMapping TypeName="aasgwebModel.xp_CustomerRequestHeader">
+        <MappingFragment StoreEntitySet="xp_CustomerRequestHeader">
+          <ScalarProperty Name="xp_customer_request_header_id" ColumnName="xp_customer_request_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="customer_master_id" ColumnName="customer_master_id" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_phone" ColumnName="customer_phone" />
+          <ScalarProperty Name="purchase_items_quantity" ColumnName="purchase_items_quantity" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="request_status" ColumnName="request_status" />
+          <ScalarProperty Name="purchase_item_date" ColumnName="purchase_item_date" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xp_CustomerRequestItem">
+      <EntityTypeMapping TypeName="aasgwebModel.xp_CustomerRequestItem">
+        <MappingFragment StoreEntitySet="xp_CustomerRequestItem">
+          <ScalarProperty Name="xp_customer_request_item_id" ColumnName="xp_customer_request_item_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="customer_master_id" ColumnName="customer_master_id" />
+          <ScalarProperty Name="xp_customer_request_header_id" ColumnName="xp_customer_request_header_id" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="purchase_item_brand" ColumnName="purchase_item_brand" />
+          <ScalarProperty Name="purchase_item_name" ColumnName="purchase_item_name" />
+          <ScalarProperty Name="purchase_item_quantity" ColumnName="purchase_item_quantity" />
+          <ScalarProperty Name="purchase_item_price" ColumnName="purchase_item_price" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xp_ItemMaster">
+      <EntityTypeMapping TypeName="aasgwebModel.xp_ItemMaster">
+        <MappingFragment StoreEntitySet="xp_ItemMaster">
+          <ScalarProperty Name="xp_item_master_id" ColumnName="xp_item_master_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_serial_number" ColumnName="item_serial_number" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_name" ColumnName="item_name" />
+          <ScalarProperty Name="item_specification" ColumnName="item_specification" />
+          <ScalarProperty Name="item_quantity" ColumnName="item_quantity" />
+          <ScalarProperty Name="item_price" ColumnName="item_price" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xp_ProcurementHeader">
+      <EntityTypeMapping TypeName="aasgwebModel.xp_ProcurementHeader">
+        <MappingFragment StoreEntitySet="xp_ProcurementHeader">
+          <ScalarProperty Name="xp_procurement_header_id" ColumnName="xp_procurement_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="supplier_master_id" ColumnName="supplier_master_id" />
+          <ScalarProperty Name="purchase_items_quantity" ColumnName="purchase_items_quantity" />
+          <ScalarProperty Name="purchase_items_total_amount" ColumnName="purchase_items_total_amount" />
+          <ScalarProperty Name="purchase_items_payment_by" ColumnName="purchase_items_payment_by" />
+          <ScalarProperty Name="purchase_items_reference_number" ColumnName="purchase_items_reference_number" />
+          <ScalarProperty Name="purchase_items_pay_amount" ColumnName="purchase_items_pay_amount" />
+          <ScalarProperty Name="purchase_items_pending_amount" ColumnName="purchase_items_pending_amount" />
+          <ScalarProperty Name="purchase_item_discount" ColumnName="purchase_item_discount" />
+          <ScalarProperty Name="purchase_item_remarks" ColumnName="purchase_item_remarks" />
+          <ScalarProperty Name="purchase_item_date" ColumnName="purchase_item_date" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xp_ProcurementItem">
+      <EntityTypeMapping TypeName="aasgwebModel.xp_ProcurementItem">
+        <MappingFragment StoreEntitySet="xp_ProcurementItem">
+          <ScalarProperty Name="xp_procurement_item_id" ColumnName="xp_procurement_item_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="supplier_master_id" ColumnName="supplier_master_id" />
+          <ScalarProperty Name="xp_procurement_header_id" ColumnName="xp_procurement_header_id" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="purchase_item_brand" ColumnName="purchase_item_brand" />
+          <ScalarProperty Name="purchase_item_name" ColumnName="purchase_item_name" />
+          <ScalarProperty Name="purchase_item_quantity" ColumnName="purchase_item_quantity" />
+          <ScalarProperty Name="purchase_item_price" ColumnName="purchase_item_price" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xp_TimeSheetChild">
+      <EntityTypeMapping TypeName="aasgwebModel.xp_TimeSheetChild">
+        <MappingFragment StoreEntitySet="xp_TimeSheetChild">
+          <ScalarProperty Name="time_sheet_child_id" ColumnName="time_sheet_child_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="staff_master_id" ColumnName="staff_master_id" />
+          <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+          <ScalarProperty Name="project_id" ColumnName="project_id" />
+          <ScalarProperty Name="project_name" ColumnName="project_name" />
+          <ScalarProperty Name="time_sheet_date" ColumnName="time_sheet_date" />
+          <ScalarProperty Name="time_sheet_header_id" ColumnName="time_sheet_header_id" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="xp_TimeSheetHeader">
+      <EntityTypeMapping TypeName="aasgwebModel.xp_TimeSheetHeader">
+        <MappingFragment StoreEntitySet="xp_TimeSheetHeader">
+          <ScalarProperty Name="time_sheet_header_id" ColumnName="time_sheet_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="staff_master_id" ColumnName="staff_master_id" />
+          <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+          <ScalarProperty Name="total_hours" ColumnName="total_hours" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="is_approved" ColumnName="is_approved" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="approved_by" ColumnName="approved_by" />
+          <ScalarProperty Name="approved_date" ColumnName="approved_date" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwItemListWithModelAndGlassColors">
+      <EntityTypeMapping TypeName="aasgwebModel.vwItemListWithModelAndGlassColor">
+        <MappingFragment StoreEntitySet="vwItemListWithModelAndGlassColor">
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="modelwithglass" ColumnName="modelwithglass" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="thickness" ColumnName="thickness" />
+          <ScalarProperty Name="plant_name" ColumnName="plant_name" />
+          <ScalarProperty Name="plant_no" ColumnName="plant_no" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="segment" ColumnName="segment" />
+          <ScalarProperty Name="stock_max_level" ColumnName="stock_max_level" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="price_2" ColumnName="price_2" />
+          <ScalarProperty Name="factory_ready_stock" ColumnName="factory_ready_stock" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwPurchaseHeaderSupplierDetails">
+      <EntityTypeMapping TypeName="aasgwebModel.vwPurchaseHeaderSupplierDetail">
+        <MappingFragment StoreEntitySet="vwPurchaseHeaderSupplierDetail">
+          <ScalarProperty Name="purchase_header_id" ColumnName="purchase_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="supplier_master_id" ColumnName="supplier_master_id" />
+          <ScalarProperty Name="purchase_items_quantity" ColumnName="purchase_items_quantity" />
+          <ScalarProperty Name="purchase_items_total_amount" ColumnName="purchase_items_total_amount" />
+          <ScalarProperty Name="purchase_items_payment_by" ColumnName="purchase_items_payment_by" />
+          <ScalarProperty Name="purchase_items_reference_number" ColumnName="purchase_items_reference_number" />
+          <ScalarProperty Name="purchase_items_pay_amount" ColumnName="purchase_items_pay_amount" />
+          <ScalarProperty Name="purchase_items_pending_amount" ColumnName="purchase_items_pending_amount" />
+          <ScalarProperty Name="purchase_item_discount" ColumnName="purchase_item_discount" />
+          <ScalarProperty Name="purchase_item_remarks" ColumnName="purchase_item_remarks" />
+          <ScalarProperty Name="purchase_item_date" ColumnName="purchase_item_date" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="supplier_name" ColumnName="supplier_name" />
+          <ScalarProperty Name="supplier_contact_person" ColumnName="supplier_contact_person" />
+          <ScalarProperty Name="supplier_phoneno" ColumnName="supplier_phoneno" />
+          <ScalarProperty Name="supplier_email" ColumnName="supplier_email" />
+          <ScalarProperty Name="supplier_gst" ColumnName="supplier_gst" />
+          <ScalarProperty Name="supplier_address" ColumnName="supplier_address" />
+          <ScalarProperty Name="supplier_state" ColumnName="supplier_state" />
+          <ScalarProperty Name="supplier_city" ColumnName="supplier_city" />
+          <ScalarProperty Name="supplier_pincode" ColumnName="supplier_pincode" />
+          <ScalarProperty Name="supplier_region" ColumnName="supplier_region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwPurchaseOrderDashboardDatas">
+      <EntityTypeMapping TypeName="aasgwebModel.vwPurchaseOrderDashboardData">
+        <MappingFragment StoreEntitySet="vwPurchaseOrderDashboardData">
+          <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwSaleHeaderPartyDetails">
+      <EntityTypeMapping TypeName="aasgwebModel.vwSaleHeaderPartyDetail">
+        <MappingFragment StoreEntitySet="vwSaleHeaderPartyDetails">
+          <ScalarProperty Name="sale_header_id" ColumnName="sale_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="total_items" ColumnName="total_items" />
+          <ScalarProperty Name="total_amount_billed" ColumnName="total_amount_billed" />
+          <ScalarProperty Name="total_amount_cash" ColumnName="total_amount_cash" />
+          <ScalarProperty Name="total_amount" ColumnName="total_amount" />
+          <ScalarProperty Name="tough_discount_precentage" ColumnName="tough_discount_precentage" />
+          <ScalarProperty Name="tough_discount" ColumnName="tough_discount" />
+          <ScalarProperty Name="tough_billing_amount" ColumnName="tough_billing_amount" />
+          <ScalarProperty Name="tough_billing_precentage" ColumnName="tough_billing_precentage" />
+          <ScalarProperty Name="htf_discount" ColumnName="htf_discount" />
+          <ScalarProperty Name="lami_discount" ColumnName="lami_discount" />
+          <ScalarProperty Name="lami_discount_precentage" ColumnName="lami_discount_precentage" />
+          <ScalarProperty Name="lami_billing_precentage" ColumnName="lami_billing_precentage" />
+          <ScalarProperty Name="lami_billing_amount" ColumnName="lami_billing_amount" />
+          <ScalarProperty Name="sale_item_remarks" ColumnName="sale_item_remarks" />
+          <ScalarProperty Name="sale_item_date" ColumnName="sale_item_date" />
+          <ScalarProperty Name="price_list" ColumnName="price_list" />
+          <ScalarProperty Name="total_net_rate" ColumnName="total_net_rate" />
+          <ScalarProperty Name="netrate_billing_precentage" ColumnName="netrate_billing_precentage" />
+          <ScalarProperty Name="netrate_billing_amount" ColumnName="netrate_billing_amount" />
+          <ScalarProperty Name="made_by" ColumnName="made_by" />
+          <ScalarProperty Name="approved_by" ColumnName="approved_by" />
+          <ScalarProperty Name="order_status" ColumnName="order_status" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="gst_amount" ColumnName="gst_amount" />
+          <ScalarProperty Name="billing_grand_total" ColumnName="billing_grand_total" />
+          <ScalarProperty Name="order_number" ColumnName="order_number" />
+          <ScalarProperty Name="rejection_remarks" ColumnName="rejection_remarks" />
+          <ScalarProperty Name="total_weight" ColumnName="total_weight" />
+          <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+          <ScalarProperty Name="party_name" ColumnName="party_name" />
+          <ScalarProperty Name="party_contact_person" ColumnName="party_contact_person" />
+          <ScalarProperty Name="party_phoneno" ColumnName="party_phoneno" />
+          <ScalarProperty Name="party_email" ColumnName="party_email" />
+          <ScalarProperty Name="party_gst" ColumnName="party_gst" />
+          <ScalarProperty Name="party_address" ColumnName="party_address" />
+          <ScalarProperty Name="party_city" ColumnName="party_city" />
+          <ScalarProperty Name="party_state" ColumnName="party_state" />
+          <ScalarProperty Name="party_pincode" ColumnName="party_pincode" />
+          <ScalarProperty Name="party_region" ColumnName="party_region" />
+          <ScalarProperty Name="tough_discount_precentage_party" ColumnName="tough_discount_precentage_party" />
+          <ScalarProperty Name="tough_billing_precentage_party" ColumnName="tough_billing_precentage_party" />
+          <ScalarProperty Name="lami_discount_precentage_party" ColumnName="lami_discount_precentage_party" />
+          <ScalarProperty Name="lami_billing_precentage_party" ColumnName="lami_billing_precentage_party" />
+          <ScalarProperty Name="netrate_billing_precentage_party" ColumnName="netrate_billing_precentage_party" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwSaleOrderDashboardDatas">
+      <EntityTypeMapping TypeName="aasgwebModel.vwSaleOrderDashboardData">
+        <MappingFragment StoreEntitySet="vwSaleOrderDashboardData">
+          <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total_Amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwxp_ProcurementHeaderSupplierDetail">
+      <EntityTypeMapping TypeName="aasgwebModel.vwxp_ProcurementHeaderSupplierDetail">
+        <MappingFragment StoreEntitySet="vwxp_ProcurementHeaderSupplierDetail">
+          <ScalarProperty Name="xp_procurement_header_id" ColumnName="xp_procurement_header_id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="supplier_master_id" ColumnName="supplier_master_id" />
+          <ScalarProperty Name="purchase_items_quantity" ColumnName="purchase_items_quantity" />
+          <ScalarProperty Name="purchase_items_total_amount" ColumnName="purchase_items_total_amount" />
+          <ScalarProperty Name="purchase_items_payment_by" ColumnName="purchase_items_payment_by" />
+          <ScalarProperty Name="purchase_items_reference_number" ColumnName="purchase_items_reference_number" />
+          <ScalarProperty Name="purchase_items_pay_amount" ColumnName="purchase_items_pay_amount" />
+          <ScalarProperty Name="purchase_items_pending_amount" ColumnName="purchase_items_pending_amount" />
+          <ScalarProperty Name="purchase_item_discount" ColumnName="purchase_item_discount" />
+          <ScalarProperty Name="purchase_item_remarks" ColumnName="purchase_item_remarks" />
+          <ScalarProperty Name="purchase_item_date" ColumnName="purchase_item_date" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="supplier_name" ColumnName="supplier_name" />
+          <ScalarProperty Name="supplier_contact_person" ColumnName="supplier_contact_person" />
+          <ScalarProperty Name="supplier_phoneno" ColumnName="supplier_phoneno" />
+          <ScalarProperty Name="supplier_email" ColumnName="supplier_email" />
+          <ScalarProperty Name="supplier_gst" ColumnName="supplier_gst" />
+          <ScalarProperty Name="supplier_address" ColumnName="supplier_address" />
+          <ScalarProperty Name="supplier_state" ColumnName="supplier_state" />
+          <ScalarProperty Name="supplier_city" ColumnName="supplier_city" />
+          <ScalarProperty Name="supplier_pincode" ColumnName="supplier_pincode" />
+          <ScalarProperty Name="supplier_region" ColumnName="supplier_region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionName="aasgwebModel.Store.StringToIntList" FunctionImportName="StringToIntList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="aasgwebModel.StringToIntList_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_GetProductionItemBreakageRejectOkCountDetails" FunctionName="aasgwebModel.Store.sp_GetProductionItemBreakageRejectOkCountDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="aasgwebModel.sp_GetProductionItemBreakageRejectOkCountDetails_Result">
+          <ScalarProperty Name="production_id" ColumnName="production_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_name_with_glasscolor" ColumnName="item_name_with_glasscolor" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="sheet_size" ColumnName="sheet_size" />
+          <ScalarProperty Name="cutting_id" ColumnName="cutting_id" />
+          <ScalarProperty Name="total_pcs" ColumnName="total_pcs" />
+          <ScalarProperty Name="store_id" ColumnName="store_id" />
+          <ScalarProperty Name="ok_pcs" ColumnName="ok_pcs" />
+          <ScalarProperty Name="Total_reject" ColumnName="Total_reject" />
+          <ScalarProperty Name="total_break" ColumnName="total_break" />
+          <ScalarProperty Name="raw_balance" ColumnName="raw_balance" />
+          <ScalarProperty Name="operator_name" ColumnName="operator_name" />
+          <ScalarProperty Name="Productiondate" ColumnName="Productiondate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_ItemProcessDetail" FunctionName="aasgwebModel.Store.sp_ItemProcessDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="aasgwebModel.sp_ItemProcessDetail_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="guid" ColumnName="guid" />
+          <ScalarProperty Name="item_master_id" ColumnName="item_master_id" />
+          <ScalarProperty Name="item_brand" ColumnName="item_brand" />
+          <ScalarProperty Name="item_model" ColumnName="item_model" />
+          <ScalarProperty Name="item_type_name" ColumnName="item_type_name" />
+          <ScalarProperty Name="item_glass_color" ColumnName="item_glass_color" />
+          <ScalarProperty Name="sale_header_master_id" ColumnName="sale_header_master_id" />
+          <ScalarProperty Name="party_master_id" ColumnName="party_master_id" />
+          <ScalarProperty Name="batch_number" ColumnName="batch_number" />
+          <ScalarProperty Name="production_quantity" ColumnName="production_quantity" />
+          <ScalarProperty Name="Startingdate" ColumnName="Startingdate" />
+          <ScalarProperty Name="EndingDate" ColumnName="EndingDate" />
+          <ScalarProperty Name="item_thickness" ColumnName="item_thickness" />
+          <ScalarProperty Name="item_sheet_size" ColumnName="item_sheet_size" />
+          <ScalarProperty Name="sheet_issued" ColumnName="sheet_issued" />
+          <ScalarProperty Name="target_pcs_from_sheet_issued" ColumnName="target_pcs_from_sheet_issued" />
+          <ScalarProperty Name="actual_pcs_from_sheet_issued" ColumnName="actual_pcs_from_sheet_issued" />
+          <ScalarProperty Name="draft_size" ColumnName="draft_size" />
+          <ScalarProperty Name="target_pcs_from_draft_size" ColumnName="target_pcs_from_draft_size" />
+          <ScalarProperty Name="actual_pcs_from_draft_size" ColumnName="actual_pcs_from_draft_size" />
+          <ScalarProperty Name="pcs_from_rejection" ColumnName="pcs_from_rejection" />
+          <ScalarProperty Name="actual_pcs_from_rejection" ColumnName="actual_pcs_from_rejection" />
+          <ScalarProperty Name="broken_sheets_in_crate" ColumnName="broken_sheets_in_crate" />
+          <ScalarProperty Name="broken_no_of_sheet" ColumnName="broken_no_of_sheet" />
+          <ScalarProperty Name="broken_pcs_cut_from_sheet" ColumnName="broken_pcs_cut_from_sheet" />
+          <ScalarProperty Name="broken_left_over_size" ColumnName="broken_left_over_size" />
+          <ScalarProperty Name="total_received" ColumnName="total_received" />
+          <ScalarProperty Name="total_broken" ColumnName="total_broken" />
+          <ScalarProperty Name="total_reject" ColumnName="total_reject" />
+          <ScalarProperty Name="total_pcs_transferred" ColumnName="total_pcs_transferred" />
+          <ScalarProperty Name="signature" ColumnName="signature" />
+          <ScalarProperty Name="item_average_hours_cost" ColumnName="item_average_hours_cost" />
+          <ScalarProperty Name="raw_balance" ColumnName="raw_balance" />
+          <ScalarProperty Name="breakage_reason" ColumnName="breakage_reason" />
+          <ScalarProperty Name="reject_reason" ColumnName="reject_reason" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+          <ScalarProperty Name="department" ColumnName="department" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_PlanPartyPartyProduction" FunctionName="aasgwebModel.Store.sp_PlanPartyPartyProduction" />
+    <FunctionImportMapping FunctionImportName="sp_StockLedgerDetail" FunctionName="aasgwebModel.Store.sp_StockLedgerDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="aasgwebModel.sp_StockLedgerDetail_Result">
+          <ScalarProperty Name="purchase_header_id" ColumnName="purchase_header_id" />
+          <ScalarProperty Name="purchase_invoice_number" ColumnName="purchase_invoice_number" />
+          <ScalarProperty Name="purchase_item_quantity" ColumnName="purchase_item_quantity" />
+          <ScalarProperty Name="purchase_item_received_quantity" ColumnName="purchase_item_received_quantity" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+          <ScalarProperty Name="modified_on" ColumnName="modified_on" />
+          <ScalarProperty Name="modified_by" ColumnName="modified_by" />
+          <ScalarProperty Name="user_ip" ColumnName="user_ip" />
+          <ScalarProperty Name="is_active" ColumnName="is_active" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_tourdetail" FunctionName="aasgwebModel.Store.sp_tourdetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="aasgwebModel.sp_tourdetail_Result">
+          <ScalarProperty Name="reqdate" ColumnName="reqdate" />
+          <ScalarProperty Name="tour_master_id" ColumnName="tour_master_id" />
+          <ScalarProperty Name="tour_name" ColumnName="tour_name" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="staff_master_id" ColumnName="staff_master_id" />
+          <ScalarProperty Name="staff_name" ColumnName="staff_name" />
+          <ScalarProperty Name="tour_numberofdays" ColumnName="tour_numberofdays" />
+          <ScalarProperty Name="tourgrade_name" ColumnName="tourgrade_name" />
+          <ScalarProperty Name="tourgrade_perday_food" ColumnName="tourgrade_perday_food" />
+          <ScalarProperty Name="tourgrade_perday_hotel" ColumnName="tourgrade_perday_hotel" />
+          <ScalarProperty Name="tourgrade_perday_transport" ColumnName="tourgrade_perday_transport" />
+          <ScalarProperty Name="expense_total" ColumnName="expense_total" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

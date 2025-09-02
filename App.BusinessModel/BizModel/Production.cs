@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace App.BusinessModel
+{
+    public class Production : CommonProperties
+    {
+        public int production_id { get; set; }
+        public System.Guid guid { get; set; }
+        public int item_master_id { get; set; }
+        public string item_brand { get; set; }
+        public string item_model { get; set; }
+        public string item_type_name { get; set; }
+        public string item_glass_color { get; set; }
+        public string item_thickness { get; set; }
+        public string sheet_size { get; set; }
+        public int no_of_sheets_issue { get; set; }
+        public int quantity_per_sheet { get; set; }
+        public int total_expectation { get; set; }
+        public int drawing_master_id { get; set; }
+        public Nullable<bool> kept_on_floor_item_status { get; set; }
+        public Nullable<int> kept_on_floor_item_master_id { get; set; }
+        public Nullable<int> kept_on_floor_item_pcs_quantity { get; set; }
+        public string sale_header_master_id { get; set; }
+        public string party_master_id { get; set; }
+        public int order_quantity { get; set; }
+        public int overall_total_item { get; set; }
+        public int factory_stock { get; set; }
+        public int shortage { get; set; }
+        public int stock_max_level { get; set; }
+        public int production_quantity { get; set; }
+        public string production_plant { get; set; }
+        public string production_status { get; set; }
+        public string production_shift { get; set; }
+        public System.DateTime started_on { get; set; }
+        public System.DateTime planned_date { get; set; }
+        public string batch_number { get; set; }
+        public string batch_status { get; set; }
+        public int cutting_id { get; set; }
+        public int cutting_quantity { get; set; }
+        public bool is_under_cutting { get; set; }
+        public int grinding_id { get; set; }
+        public int grinding_quantity { get; set; }
+        public bool is_under_grinding { get; set; }
+        public int washing_one_id { get; set; }
+        public int washing_one_quantity { get; set; }
+        public bool is_under_washing_one { get; set; }
+        public int hole_id { get; set; }
+        public int hole_quantity { get; set; }
+        public bool is_under_hole { get; set; }
+        public int washing_id { get; set; }
+        public int washing_quantity { get; set; }
+        public bool is_under_washing { get; set; }
+        public int paint_id { get; set; }
+        public int paint_quantity { get; set; }
+        public bool is_under_paint { get; set; }
+        public int dfg_print_id { get; set; }
+        public int dfg_print_quantity { get; set; }
+        public bool is_under_dfg_print { get; set; }
+        public int tempering_id { get; set; }
+        public int tempering_quantity { get; set; }
+        public bool is_under_tempering { get; set; }
+        public int packing_id { get; set; }
+        public int packing_quantity { get; set; }
+        public bool is_under_packing { get; set; }
+        public int store_id { get; set; }
+        public int store_quantity { get; set; }
+        public bool is_under_store { get; set; }
+        public int production_planning_id { get; set; }
+
+    }
+}

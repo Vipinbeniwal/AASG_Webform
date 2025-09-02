@@ -1,0 +1,10 @@
+C:\AspSource\Git_AasgAdmin\App.BusinessModel\bin\Debug\App.BusinessModel.dll
+C:\AspSource\Git_AasgAdmin\App.BusinessModel\bin\Debug\App.BusinessModel.pdb
+C:\AspSource\Git_AasgAdmin\App.BusinessModel\obj\Debug\App.BusinessModel.csproj.CoreCompileInputs.cache
+C:\AspSource\Git_AasgAdmin\App.BusinessModel\obj\Debug\App.BusinessModel.dll
+C:\AspSource\Git_AasgAdmin\App.BusinessModel\obj\Debug\App.BusinessModel.pdb
+C:\SourceTree\AASGWeb\App.BusinessModel\bin\Debug\App.BusinessModel.dll
+C:\SourceTree\AASGWeb\App.BusinessModel\bin\Debug\App.BusinessModel.pdb
+C:\SourceTree\AASGWeb\App.BusinessModel\obj\Debug\App.BusinessModel.csproj.CoreCompileInputs.cache
+C:\SourceTree\AASGWeb\App.BusinessModel\obj\Debug\App.BusinessModel.dll
+C:\SourceTree\AASGWeb\App.BusinessModel\obj\Debug\App.BusinessModel.pdb

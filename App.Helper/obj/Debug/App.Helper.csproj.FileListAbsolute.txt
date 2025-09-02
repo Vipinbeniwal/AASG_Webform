@@ -1,0 +1,12 @@
+C:\AspSource\Git_AasgAdmin\App.Helper\bin\Debug\App.Helper.dll
+C:\AspSource\Git_AasgAdmin\App.Helper\bin\Debug\App.Helper.pdb
+C:\AspSource\Git_AasgAdmin\App.Helper\obj\Debug\App.Helper.csproj.CoreCompileInputs.cache
+C:\AspSource\Git_AasgAdmin\App.Helper\obj\Debug\App.Helper.dll
+C:\AspSource\Git_AasgAdmin\App.Helper\obj\Debug\App.Helper.pdb
+C:\AspSource\Git_AasgAdmin\App.Helper\obj\Debug\App.Helper.csproj.AssemblyReference.cache
+C:\SourceTree\AASGWeb\App.Helper\bin\Debug\App.Helper.dll
+C:\SourceTree\AASGWeb\App.Helper\bin\Debug\App.Helper.pdb
+C:\SourceTree\AASGWeb\App.Helper\obj\Debug\App.Helper.csproj.AssemblyReference.cache
+C:\SourceTree\AASGWeb\App.Helper\obj\Debug\App.Helper.csproj.CoreCompileInputs.cache
+C:\SourceTree\AASGWeb\App.Helper\obj\Debug\App.Helper.dll
+C:\SourceTree\AASGWeb\App.Helper\obj\Debug\App.Helper.pdb

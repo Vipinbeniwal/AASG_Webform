@@ -1,0 +1,2012 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="aasgwebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="StringToIntList_Result">
+    <Property Name="ID" Type="Int32" />
+  </ComplexType>
+  <EntityType Name="ActivityLog">
+    <Key>
+      <PropertyRef Name="app_user_id" />
+    </Key>
+    <Property Name="activity_log_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="vendor_master_id" Type="Int32" Nullable="false" />
+    <Property Name="app_user_id" Type="Int32" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="heading" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="heading_class" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="activity" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="icon_class" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Attendance">
+    <Key>
+      <PropertyRef Name="attendance_id" />
+    </Key>
+    <Property Name="attendance_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="attendance_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="direction" Type="Int32" Nullable="false" />
+    <Property Name="checkin_stamp" Type="DateTime" Precision="3" />
+    <Property Name="checkout_stamp" Type="DateTime" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChallanHeader">
+    <Key>
+      <PropertyRef Name="challan_header_id" />
+    </Key>
+    <Property Name="challan_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="loading_master_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_header_id" Type="Int32" Nullable="false" />
+    <Property Name="party_master_id" Type="Int32" Nullable="false" />
+    <Property Name="order_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="total_items_pre_challan" Type="Int32" Nullable="false" />
+    <Property Name="total_items_after_challan" Type="Int32" Nullable="false" />
+    <Property Name="total_amount_billed" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_amount_cash" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_discount_precentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="tough_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_total_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="htf_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="lami_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="lami_discount_precentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lami_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="lami_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="lami_total_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="sale_item_remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="price_list" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="total_net_rate" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="netrate_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="netrate_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="gst_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="billing_grand_total" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_weight" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="staff_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="vehicle_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="driver_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="delivery_boy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="made_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="approved_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="order_status" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="rejection_remarks" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChallanItem">
+    <Key>
+      <PropertyRef Name="challan_item_id" />
+    </Key>
+    <Property Name="challan_item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="loading_master_id" Type="Int32" Nullable="false" />
+    <Property Name="challan_header_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_header_id" Type="Int32" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="party_master_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_type_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_type_title" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_quantity_actual_load" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="sale_item_price_2" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="sale_item_net_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_weight" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="item_gst_percentage" Type="Int32" Nullable="false" />
+    <Property Name="item_unit" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_discount_percentage" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_discount_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_bill_percentage" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_bill_rate" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_bill_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_gst_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_final_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DraftMaster">
+    <Key>
+      <PropertyRef Name="draft_master_id" />
+    </Key>
+    <Property Name="draft_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="production_id" Type="Int32" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parent_item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="items_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="left_over_size_availabel" Type="Boolean" Nullable="false" />
+    <Property Name="left_over_size" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="draft_quantity" Type="Int32" Nullable="false" />
+    <Property Name="draft_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DrawingMaster">
+    <Key>
+      <PropertyRef Name="drawing_master_id" />
+    </Key>
+    <Property Name="drawing_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="selected_item_master_id" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="drawing_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="drawing_type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="drawing_alias" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="drawing_description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="drawing_image" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DropdownMaster">
+    <Key>
+      <PropertyRef Name="dropdown_master_id" />
+    </Key>
+    <Property Name="dropdown_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="dropdown_type" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dropdown_item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="dropdown_item_alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExceptionLog">
+    <Key>
+      <PropertyRef Name="exception_log_id" />
+    </Key>
+    <Property Name="exception_log_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="exception_message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="exception_log_date" Type="DateTime" Precision="3" />
+    <Property Name="exception_source" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="user_agent" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="trace_log" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="param_value" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FeatureMaster">
+    <Key>
+      <PropertyRef Name="feature_master_id" />
+    </Key>
+    <Property Name="feature_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="feature_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="feature_remarks" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FollowUp">
+    <Key>
+      <PropertyRef Name="followup_id" />
+    </Key>
+    <Property Name="followup_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="lead_header_id" Type="Int32" Nullable="false" />
+    <Property Name="followup_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="followup_text" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="next_followup_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="special_remarks" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemMaster">
+    <Key>
+      <PropertyRef Name="item_master_id" />
+    </Key>
+    <Property Name="item_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="model" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="glass_color" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="hsn_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gst_rate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_height" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_width" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="actual_sqm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="used_sqm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="perimeter" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="plant_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="plant_no" Type="Int32" Nullable="false" />
+    <Property Name="diamond_required" Type="Boolean" Nullable="false" />
+    <Property Name="diamond_in_rs" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="rg_required" Type="Boolean" Nullable="false" />
+    <Property Name="rg_in_rs" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="washing_one" Type="Boolean" Nullable="false" />
+    <Property Name="hole_required" Type="Boolean" Nullable="false" />
+    <Property Name="number_of_holes" Type="Int32" Nullable="false" />
+    <Property Name="diameter" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="washing_two" Type="Boolean" Nullable="false" />
+    <Property Name="is_normal_paint" Type="Boolean" Nullable="false" />
+    <Property Name="normal_paint_quantity" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="normal_paint_rs" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="is_black_paint" Type="Boolean" Nullable="false" />
+    <Property Name="black_paint_quantity" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="black_paint_rs" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="is_dfg_paint" Type="Boolean" Nullable="false" />
+    <Property Name="dfg_paint_quantity" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="dfg_paint_rs" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="is_thinner_paint" Type="Boolean" Nullable="false" />
+    <Property Name="thinner_paint_quantity" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="thinner_paint_rs" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="pre_processing_breakage_level" Type="Int32" Nullable="false" />
+    <Property Name="processing_breakage_level" Type="Int32" Nullable="false" />
+    <Property Name="polish_required" Type="Boolean" Nullable="false" />
+    <Property Name="polish_in_rs" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="connector_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="connector_price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="is_doorclip_required" Type="Boolean" Nullable="false" />
+    <Property Name="doorclip_type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="doorclip_rate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="packing_polythin_required" Type="Boolean" Nullable="false" />
+    <Property Name="packing_in_rs" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="packing_paper_required" Type="Boolean" Nullable="false" />
+    <Property Name="packing_paper_quantity" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="stock_max_level" Type="Int32" Nullable="false" />
+    <Property Name="item_weight" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="price_2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="price_type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mm_sqm" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="first_dop" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="last_dop" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="segment" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="priority" Type="Int32" Nullable="false" />
+    <Property Name="clear_focus" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="max_stock_level_apr_20" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="max_stock_level_may_21" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="max_stock_level_jan_21" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="q1_2021" Type="Int32" Nullable="false" />
+    <Property Name="q2_2021" Type="Int32" Nullable="false" />
+    <Property Name="q3_2021" Type="Int32" Nullable="false" />
+    <Property Name="q4_2021" Type="Int32" Nullable="false" />
+    <Property Name="pre_processing" Type="Int32" />
+    <Property Name="during_processing" Type="Int32" />
+    <Property Name="factory_ready_stock" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LeadHeader">
+    <Key>
+      <PropertyRef Name="lead_header_id" />
+    </Key>
+    <Property Name="lead_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="party_master_id" Type="Int32" Nullable="false" />
+    <Property Name="party_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_contact_person" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="party_phoneno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="followup_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="lead_remarks" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoadingMaster">
+    <Key>
+      <PropertyRef Name="loading_master_id" />
+    </Key>
+    <Property Name="loading_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="sale_header_id" Type="Int32" Nullable="false" />
+    <Property Name="order_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="party_master_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_type_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_type_title" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_weight" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MenuMaster">
+    <Key>
+      <PropertyRef Name="menu_master_id" />
+    </Key>
+    <Property Name="menu_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="display_name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="page_url" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="parent_id" Type="Int32" Nullable="false" />
+    <Property Name="parent_order" Type="Int32" />
+    <Property Name="child_order" Type="Int32" />
+    <Property Name="cssclass" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OnFloorItemMaster">
+    <Key>
+      <PropertyRef Name="on_floor_item_master_id" />
+    </Key>
+    <Property Name="on_floor_item_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="production_id" Type="Int32" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="parent_item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="on_floor_items_master_id" Type="Int32" Nullable="false" />
+    <Property Name="items_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="items_type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="broken_sheet_size" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="broken_sheet_quantity" Type="Int32" Nullable="false" />
+    <Property Name="per_broken_sheet_quantity" Type="Int32" Nullable="false" />
+    <Property Name="per_broken_sheet_quantity_expected" Type="Int32" Nullable="false" />
+    <Property Name="items_pcs_quantity" Type="Int32" Nullable="false" />
+    <Property Name="left_over_size_availabel" Type="Boolean" Nullable="false" />
+    <Property Name="left_over_size" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="remarks" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PartyMaster">
+    <Key>
+      <PropertyRef Name="party_master_id" />
+    </Key>
+    <Property Name="party_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="party_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_contact_person" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="party_phoneno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="party_gst" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="party_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="party_state" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="party_city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="party_pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="party_region" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="tough_discount_precentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="tough_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="lami_discount_precentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lami_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="netrate_billing_precentage" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessCutting">
+    <Key>
+      <PropertyRef Name="process_cutting_id" />
+    </Key>
+    <Property Name="process_cutting_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kept_on_floor_item_status" Type="Boolean" />
+    <Property Name="kept_on_floor_item_master_id" Type="Int32" />
+    <Property Name="kept_on_floor_item_pcs_quantity" Type="Int32" />
+    <Property Name="kept_on_floor_item_pcs_received" Type="Int32" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="cutting_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cutting_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="item_height" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="item_width" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_height" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_width" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="cutting_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessDfgPrint">
+    <Key>
+      <PropertyRef Name="process_dfg_print_id" />
+    </Key>
+    <Property Name="process_dfg_print_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="dfg_print_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dfg_print_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="dfg_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessGrinding">
+    <Key>
+      <PropertyRef Name="process_grinding_id" />
+    </Key>
+    <Property Name="process_grinding_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="grinding_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="grinding_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="grinding_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessHole">
+    <Key>
+      <PropertyRef Name="process_hole_id" />
+    </Key>
+    <Property Name="process_hole_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="hole_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="hole_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="hole_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessPackaging">
+    <Key>
+      <PropertyRef Name="process_packaging_id" />
+    </Key>
+    <Property Name="process_packaging_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="packaging_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="packaging_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="packaging_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessPaint">
+    <Key>
+      <PropertyRef Name="process_paint_id" />
+    </Key>
+    <Property Name="process_paint_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="paint_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="paint_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="paint_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessStore">
+    <Key>
+      <PropertyRef Name="process_store_id" />
+    </Key>
+    <Property Name="process_store_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="store_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="store_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="store_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessTempering">
+    <Key>
+      <PropertyRef Name="process_tempering_id" />
+    </Key>
+    <Property Name="process_tempering_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="tempering_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tempering_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="tempering_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessTemperingReport">
+    <Key>
+      <PropertyRef Name="process_tempering_report_id" />
+    </Key>
+    <Property Name="process_tempering_report_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="process_tempering_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="report_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="htf_shift_from" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="htf_shift_to" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="plant_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="report_shift" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="quantity_in_pcs" Type="Int32" Nullable="false" />
+    <Property Name="production_target_in_pcs" Type="Int32" Nullable="false" />
+    <Property Name="production_target_in_percentage" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="heating_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="furnace_meter_on_heating" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="big_blower_on_heating" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="small_blower_on_heating" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="production_start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="furnace_meter_start_production" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="big_blower_start_production" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="small_blower_start_production" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="production_finish" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="furnace_meter_finish_production" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="big_blower_finish_production" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="small_blower_finish_production" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="operator_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="line_incharge" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="helper_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="supervisor_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="hour_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="item_verify_status" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ok_total_pcs_in_hours" Type="Int32" Nullable="false" />
+    <Property Name="breakage_total_pcs" Type="Int32" Nullable="false" />
+    <Property Name="reject_total_pcs" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="item_average_hours_cost" Type="Decimal" Precision="10" Scale="5" Nullable="false" />
+    <Property Name="item_raw_balance" Type="Int32" Nullable="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessWashing">
+    <Key>
+      <PropertyRef Name="process_washing_id" />
+    </Key>
+    <Property Name="process_washing_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="washing_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="washing_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="washing_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProcessWashingOne">
+    <Key>
+      <PropertyRef Name="process_washing_one_id" />
+    </Key>
+    <Property Name="process_washing_one_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="washing_started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="washing_ended_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="item_thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="item_sheet_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="target_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_sheet_issued" Type="Int32" Nullable="false" />
+    <Property Name="draft_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="target_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_draft_size" Type="Int32" Nullable="false" />
+    <Property Name="pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="actual_pcs_from_rejection" Type="Int32" Nullable="false" />
+    <Property Name="broken_sheets_in_crate" Type="Int32" Nullable="false" />
+    <Property Name="broken_no_of_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_pcs_cut_from_sheet" Type="Int32" Nullable="false" />
+    <Property Name="broken_left_over_size" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="total_received" Type="Int32" Nullable="false" />
+    <Property Name="total_broken" Type="Int32" Nullable="false" />
+    <Property Name="total_reject" Type="Int32" Nullable="false" />
+    <Property Name="total_pcs_transferred" Type="Int32" Nullable="false" />
+    <Property Name="signature" Type="Int32" Nullable="false" />
+    <Property Name="breakage_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="breakage_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="reject_pcs_number" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="reject_reason" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="washing_one_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Production">
+    <Key>
+      <PropertyRef Name="production_id" />
+    </Key>
+    <Property Name="production_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="item_thickness" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sheet_size" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="no_of_sheets_issue" Type="Int32" Nullable="false" />
+    <Property Name="quantity_per_sheet" Type="Int32" Nullable="false" />
+    <Property Name="total_expectation" Type="Int32" Nullable="false" />
+    <Property Name="drawing_master_id" Type="Int32" Nullable="false" />
+    <Property Name="kept_on_floor_item_status" Type="Boolean" />
+    <Property Name="kept_on_floor_item_master_id" Type="Int32" />
+    <Property Name="kept_on_floor_item_pcs_quantity" Type="Int32" />
+    <Property Name="sale_header_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_master_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="order_quantity" Type="Int32" Nullable="false" />
+    <Property Name="overall_total_item" Type="Int32" Nullable="false" />
+    <Property Name="factory_stock" Type="Int32" Nullable="false" />
+    <Property Name="shortage" Type="Int32" Nullable="false" />
+    <Property Name="stock_max_level" Type="Int32" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="production_plant" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="production_status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="production_shift" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="started_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="planned_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="batch_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="batch_status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cutting_id" Type="Int32" Nullable="false" />
+    <Property Name="cutting_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_cutting" Type="Boolean" Nullable="false" />
+    <Property Name="grinding_id" Type="Int32" Nullable="false" />
+    <Property Name="grinding_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_grinding" Type="Boolean" Nullable="false" />
+    <Property Name="washing_one_id" Type="Int32" Nullable="false" />
+    <Property Name="washing_one_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_washing_one" Type="Boolean" Nullable="false" />
+    <Property Name="hole_id" Type="Int32" Nullable="false" />
+    <Property Name="hole_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_hole" Type="Boolean" Nullable="false" />
+    <Property Name="washing_id" Type="Int32" Nullable="false" />
+    <Property Name="washing_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_washing" Type="Boolean" Nullable="false" />
+    <Property Name="paint_id" Type="Int32" Nullable="false" />
+    <Property Name="paint_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_paint" Type="Boolean" Nullable="false" />
+    <Property Name="dfg_print_id" Type="Int32" Nullable="false" />
+    <Property Name="dfg_print_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_dfg_print" Type="Boolean" Nullable="false" />
+    <Property Name="tempering_id" Type="Int32" Nullable="false" />
+    <Property Name="tempering_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_tempering" Type="Boolean" Nullable="false" />
+    <Property Name="packing_id" Type="Int32" Nullable="false" />
+    <Property Name="packing_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_packing" Type="Boolean" Nullable="false" />
+    <Property Name="store_id" Type="Int32" Nullable="false" />
+    <Property Name="store_quantity" Type="Int32" Nullable="false" />
+    <Property Name="is_under_store" Type="Boolean" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="production_planning_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductionPlanning">
+    <Key>
+      <PropertyRef Name="production_planning_id" />
+    </Key>
+    <Property Name="production_planning_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_model" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_glass_color" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="party_master_id" Type="Int32" Nullable="false" />
+    <Property Name="order_quantity" Type="Int32" Nullable="false" />
+    <Property Name="overall_total_item" Type="Int32" Nullable="false" />
+    <Property Name="factory_stock" Type="Int32" Nullable="false" />
+    <Property Name="shortage" Type="Int32" Nullable="false" />
+    <Property Name="stock_max_level" Type="Int32" Nullable="false" />
+    <Property Name="production_quantity" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductionTrail">
+    <Key>
+      <PropertyRef Name="production_trail_id" />
+    </Key>
+    <Property Name="production_trail_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="production_id" Type="Int32" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="process_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="heading" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="heading_class" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="activity" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="icon" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="icon_class" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseHeader">
+    <Key>
+      <PropertyRef Name="purchase_header_id" />
+    </Key>
+    <Property Name="purchase_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="supplier_master_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_items_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_items_total_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_items_payment_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_items_reference_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_items_pay_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_items_pending_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_item_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="purchase_item_remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_item_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseItem">
+    <Key>
+      <PropertyRef Name="purchase_item_id" />
+    </Key>
+    <Property Name="purchase_item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="purchase_header_id" Type="Int32" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="supplier_master_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_type_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="purchase_item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_price" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleHeader">
+    <Key>
+      <PropertyRef Name="sale_header_id" />
+    </Key>
+    <Property Name="sale_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="party_master_id" Type="Int32" Nullable="false" />
+    <Property Name="order_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="total_items" Type="Int32" Nullable="false" />
+    <Property Name="total_amount_billed" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_amount_cash" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_discount_precentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="tough_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_total_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="htf_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="lami_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="lami_discount_precentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lami_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="lami_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="lami_total_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="sale_item_remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="price_list" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="total_net_rate" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="netrate_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="netrate_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="gst_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="billing_grand_total" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_weight" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="staff_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="made_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="approved_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="order_status" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="rejection_remarks" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaleItem">
+    <Key>
+      <PropertyRef Name="sale_item_id" />
+    </Key>
+    <Property Name="sale_item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="sale_header_id" Type="Int32" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="party_master_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_type_id" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_type_title" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="sale_item_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="sale_item_price_2" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="sale_item_net_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_weight" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="item_gst_percentage" Type="Int32" Nullable="false" />
+    <Property Name="item_unit" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="item_discount_percentage" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_discount_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_bill_percentage" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_bill_rate" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_bill_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_gst_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_final_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StaffMaster">
+    <Key>
+      <PropertyRef Name="staff_master_id" />
+    </Key>
+    <Property Name="staff_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="staff_employee_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="user_role_id" Type="Int32" Nullable="false" />
+    <Property Name="staff_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staff_phoneNo" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staff_email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="staff_password" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staff_designation_id" Type="Int32" Nullable="false" />
+    <Property Name="staff_joinning_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="staff_grade_id" Type="Int32" Nullable="false" />
+    <Property Name="staff_current_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="staff_current_city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="staff_current_state" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="staff_current_pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="staff_permanent_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="staff_permanent_city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="staff_permanent_state" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="staff_permanent_pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="staff_bankname" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="staff_account_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="staff_ifsc_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="staff_pancard_number" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="staff_pancard_image" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="staff_aadhar_number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="staff_aadhar_front" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="staff_aadhar_back" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="last_order_date" Type="DateTime" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockIssuanceHeader">
+    <Key>
+      <PropertyRef Name="stock_issuance_header_id" />
+    </Key>
+    <Property Name="stock_issuance_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="items_total_quantity" Type="Int32" Nullable="false" />
+    <Property Name="items_total_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="item_remarks" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="item_require_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockIssuanceItem">
+    <Key>
+      <PropertyRef Name="stock_issuance_item_id" />
+    </Key>
+    <Property Name="stock_issuance_item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="stock_issuance_header_id" Type="Int32" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="item_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="item_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockLedger">
+    <Key>
+      <PropertyRef Name="stock_ledger_id" />
+    </Key>
+    <Property Name="stock_ledger_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="purchase_header_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_invoice_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="purchase_item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_received_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_remarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SupplierMaster">
+    <Key>
+      <PropertyRef Name="supplier_master_id" />
+    </Key>
+    <Property Name="supplier_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="supplier_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_contact_person" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_phoneno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_gst" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_state" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_region" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourExpenseHeader">
+    <Key>
+      <PropertyRef Name="tour_expense_header_id" />
+    </Key>
+    <Property Name="tour_expense_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tour_master_id" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="tour_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="start_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="end_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="expense_food_total" Type="Int32" Nullable="false" />
+    <Property Name="expense_hotel_total" Type="Int32" Nullable="false" />
+    <Property Name="expense_conveyance_total" Type="Int32" Nullable="false" />
+    <Property Name="expense_misc_total" Type="Int32" Nullable="false" />
+    <Property Name="expense_total" Type="Int32" Nullable="false" />
+    <Property Name="expense_total_approved" Type="Int32" Nullable="false" />
+    <Property Name="approved_by" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_paid" Type="Boolean" Nullable="false" />
+    <Property Name="payment_mode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="payment_ref_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="payment_made" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourExpenseItem">
+    <Key>
+      <PropertyRef Name="tour_expense_item_id" />
+    </Key>
+    <Property Name="tour_expense_item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tour_expense_header_id" Type="Int32" Nullable="false" />
+    <Property Name="tour_master_id" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="expense_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="expense_food" Type="Int32" Nullable="false" />
+    <Property Name="expense_hotel" Type="Int32" Nullable="false" />
+    <Property Name="expense_conveyance" Type="Int32" Nullable="false" />
+    <Property Name="expense_misc" Type="Int32" Nullable="false" />
+    <Property Name="expense_total_item" Type="Int32" Nullable="false" />
+    <Property Name="expense_total_approved_item" Type="Int32" Nullable="false" />
+    <Property Name="approved_by" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="expense_image" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="TourGradeMaster">
+    <Key>
+      <PropertyRef Name="tourgrade_master_id" />
+    </Key>
+    <Property Name="tourgrade_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="tourgrade_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tourgrade_perday_transport" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="tourgrade_perday_food" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="tourgrade_perday_hotel" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="tourgrade_perday_misc" Type="Decimal" Precision="8" Scale="2" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TourMaster">
+    <Key>
+      <PropertyRef Name="tour_master_id" />
+    </Key>
+    <Property Name="tour_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="tour_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="start_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="end_date" Type="DateTime" Precision="3" />
+    <Property Name="staff_master_id" Type="Int32" Nullable="false" />
+    <Property Name="tour_numberofdays" Type="Int32" Nullable="false" />
+    <Property Name="tour_agenda" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="tour_status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="staff_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_approved" Type="Boolean" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="user_role_id" />
+    </Key>
+    <Property Name="user_role_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="user_role_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="assigned_menu_ids" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="assigned_feature_ids" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="xp_CustomerRequestHeader">
+    <Key>
+      <PropertyRef Name="xp_customer_request_header_id" />
+    </Key>
+    <Property Name="xp_customer_request_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="customer_master_id" Type="Int32" Nullable="false" />
+    <Property Name="customer_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="customer_phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="purchase_items_quantity" Type="Int32" Nullable="false" />
+    <Property Name="remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="request_status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="purchase_item_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xp_CustomerRequestItem">
+    <Key>
+      <PropertyRef Name="xp_customer_request_item_id" />
+    </Key>
+    <Property Name="xp_customer_request_item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="customer_master_id" Type="Int32" Nullable="false" />
+    <Property Name="xp_customer_request_header_id" Type="Int32" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="purchase_item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="purchase_item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_price" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xp_ItemMaster">
+    <Key>
+      <PropertyRef Name="xp_item_master_id" />
+    </Key>
+    <Property Name="xp_item_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="item_serial_number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="item_specification" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="item_price" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xp_ProcurementHeader">
+    <Key>
+      <PropertyRef Name="xp_procurement_header_id" />
+    </Key>
+    <Property Name="xp_procurement_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="supplier_master_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_items_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_items_total_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_items_payment_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_items_reference_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_items_pay_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_items_pending_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_item_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="purchase_item_remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_item_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xp_ProcurementItem">
+    <Key>
+      <PropertyRef Name="xp_procurement_item_id" />
+    </Key>
+    <Property Name="xp_procurement_item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="supplier_master_id" Type="Int32" Nullable="false" />
+    <Property Name="xp_procurement_header_id" Type="Int32" Nullable="false" />
+    <Property Name="item_master_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="purchase_item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="purchase_item_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_item_price" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xp_TimeSheetChild">
+    <Key>
+      <PropertyRef Name="time_sheet_child_id" />
+    </Key>
+    <Property Name="time_sheet_child_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="staff_master_id" Type="Int32" Nullable="false" />
+    <Property Name="staff_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="project_id" Type="Int32" Nullable="false" />
+    <Property Name="project_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="time_sheet_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="time_sheet_header_id" Type="Int32" Nullable="false" />
+    <Property Name="hours" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="remarks" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="xp_TimeSheetHeader">
+    <Key>
+      <PropertyRef Name="time_sheet_header_id" />
+    </Key>
+    <Property Name="time_sheet_header_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="staff_master_id" Type="Int32" Nullable="false" />
+    <Property Name="staff_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="total_hours" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="remarks" Type="String" MaxLength="800" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="is_approved" Type="Boolean" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="approved_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="approved_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwItemListWithModelAndGlassColor">
+    <Key>
+      <PropertyRef Name="item_master_id" />
+      <PropertyRef Name="brand" />
+      <PropertyRef Name="plant_no" />
+      <PropertyRef Name="stock_max_level" />
+      <PropertyRef Name="factory_ready_stock" />
+      <PropertyRef Name="created_on" />
+      <PropertyRef Name="created_by" />
+      <PropertyRef Name="modified_on" />
+      <PropertyRef Name="modified_by" />
+      <PropertyRef Name="is_active" />
+    </Key>
+    <Property Name="item_master_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="brand" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="model" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="modelwithglass" Type="String" MaxLength="573" FixedLength="false" Unicode="false" />
+    <Property Name="item_type_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="thickness" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="plant_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="plant_no" Type="Int32" Nullable="false" />
+    <Property Name="category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="segment" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="stock_max_level" Type="Int32" Nullable="false" />
+    <Property Name="price" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="price_2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="factory_ready_stock" Type="Int32" Nullable="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwPurchaseHeaderSupplierDetail">
+    <Key>
+      <PropertyRef Name="purchase_header_id" />
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="supplier_master_id" />
+      <PropertyRef Name="purchase_items_quantity" />
+      <PropertyRef Name="purchase_items_total_amount" />
+      <PropertyRef Name="purchase_items_pay_amount" />
+      <PropertyRef Name="purchase_items_pending_amount" />
+      <PropertyRef Name="purchase_item_date" />
+      <PropertyRef Name="created_on" />
+      <PropertyRef Name="created_by" />
+      <PropertyRef Name="modified_on" />
+      <PropertyRef Name="modified_by" />
+      <PropertyRef Name="is_active" />
+      <PropertyRef Name="supplier_name" />
+      <PropertyRef Name="supplier_phoneno" />
+      <PropertyRef Name="supplier_gst" />
+      <PropertyRef Name="supplier_region" />
+    </Key>
+    <Property Name="purchase_header_id" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="supplier_master_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_items_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_items_total_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_items_payment_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_items_reference_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_items_pay_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_items_pending_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_item_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="purchase_item_remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_item_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="supplier_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_contact_person" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_phoneno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_gst" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_state" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_region" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwPurchaseOrderDashboardData">
+    <Key>
+      <PropertyRef Name="Attribute" />
+    </Key>
+    <Property Name="Attribute" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Value" Type="Int32" />
+  </EntityType>
+  <EntityType Name="vwSaleHeaderPartyDetail">
+    <Key>
+      <PropertyRef Name="sale_header_id" />
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="party_master_id" />
+      <PropertyRef Name="total_items" />
+      <PropertyRef Name="tough_discount_precentage" />
+      <PropertyRef Name="tough_billing_precentage" />
+      <PropertyRef Name="lami_discount_precentage" />
+      <PropertyRef Name="lami_billing_precentage" />
+      <PropertyRef Name="sale_item_date" />
+      <PropertyRef Name="netrate_billing_precentage" />
+      <PropertyRef Name="created_on" />
+      <PropertyRef Name="created_by" />
+      <PropertyRef Name="modified_on" />
+      <PropertyRef Name="modified_by" />
+      <PropertyRef Name="is_active" />
+      <PropertyRef Name="total_weight" />
+      <PropertyRef Name="party_name" />
+      <PropertyRef Name="party_phoneno" />
+      <PropertyRef Name="party_region" />
+      <PropertyRef Name="tough_discount_precentage_party" />
+      <PropertyRef Name="tough_billing_precentage_party" />
+      <PropertyRef Name="lami_discount_precentage_party" />
+      <PropertyRef Name="lami_billing_precentage_party" />
+      <PropertyRef Name="netrate_billing_precentage_party" />
+    </Key>
+    <Property Name="sale_header_id" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="party_master_id" Type="Int32" Nullable="false" />
+    <Property Name="total_items" Type="Int32" Nullable="false" />
+    <Property Name="total_amount_billed" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_amount_cash" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="total_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_discount_precentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="tough_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="tough_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="htf_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="lami_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="lami_discount_precentage" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lami_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="lami_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="sale_item_remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="sale_item_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="price_list" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="total_net_rate" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="netrate_billing_precentage" Type="Int32" Nullable="false" />
+    <Property Name="netrate_billing_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="made_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="approved_by" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="order_status" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="gst_amount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="billing_grand_total" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="order_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rejection_remarks" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="total_weight" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="staff_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="party_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_contact_person" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="party_phoneno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="party_email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="party_gst" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="party_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="party_city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="party_state" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="party_pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="party_region" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tough_discount_precentage_party" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="tough_billing_precentage_party" Type="Int32" Nullable="false" />
+    <Property Name="lami_discount_precentage_party" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+    <Property Name="lami_billing_precentage_party" Type="Int32" Nullable="false" />
+    <Property Name="netrate_billing_precentage_party" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwSaleOrderDashboardData">
+    <Key>
+      <PropertyRef Name="Attribute" />
+      <PropertyRef Name="Total_Amount" />
+    </Key>
+    <Property Name="Attribute" Type="String" MaxLength="21" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Value" Type="Int32" />
+    <Property Name="Total_Amount" Type="Decimal" Precision="38" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vwxp_ProcurementHeaderSupplierDetail">
+    <Key>
+      <PropertyRef Name="xp_procurement_header_id" />
+      <PropertyRef Name="guid" />
+      <PropertyRef Name="supplier_master_id" />
+      <PropertyRef Name="purchase_items_quantity" />
+      <PropertyRef Name="purchase_items_total_amount" />
+      <PropertyRef Name="purchase_items_pay_amount" />
+      <PropertyRef Name="purchase_items_pending_amount" />
+      <PropertyRef Name="purchase_item_date" />
+      <PropertyRef Name="created_on" />
+      <PropertyRef Name="created_by" />
+      <PropertyRef Name="modified_on" />
+      <PropertyRef Name="modified_by" />
+      <PropertyRef Name="is_active" />
+      <PropertyRef Name="supplier_name" />
+      <PropertyRef Name="supplier_phoneno" />
+      <PropertyRef Name="supplier_gst" />
+      <PropertyRef Name="supplier_region" />
+    </Key>
+    <Property Name="xp_procurement_header_id" Type="Int32" Nullable="false" />
+    <Property Name="guid" Type="Guid" Nullable="false" />
+    <Property Name="supplier_master_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_items_quantity" Type="Int32" Nullable="false" />
+    <Property Name="purchase_items_total_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_items_payment_by" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_items_reference_number" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_items_pay_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_items_pending_amount" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="purchase_item_discount" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="purchase_item_remarks" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="purchase_item_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="created_by" Type="Int32" Nullable="false" />
+    <Property Name="modified_on" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_by" Type="Int32" Nullable="false" />
+    <Property Name="user_ip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="is_active" Type="Boolean" Nullable="false" />
+    <Property Name="supplier_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_contact_person" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_phoneno" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_gst" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="supplier_address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_state" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_city" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="supplier_region" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ActivityLogs" EntityType="Self.ActivityLog" />
+    <EntitySet Name="Attendances" EntityType="Self.Attendance" />
+    <EntitySet Name="ChallanHeaders" EntityType="Self.ChallanHeader" />
+    <EntitySet Name="ChallanItems" EntityType="Self.ChallanItem" />
+    <EntitySet Name="DraftMasters" EntityType="Self.DraftMaster" />
+    <EntitySet Name="DrawingMasters" EntityType="Self.DrawingMaster" />
+    <EntitySet Name="DropdownMasters" EntityType="Self.DropdownMaster" />
+    <EntitySet Name="ExceptionLogs" EntityType="Self.ExceptionLog" />
+    <EntitySet Name="FeatureMasters" EntityType="Self.FeatureMaster" />
+    <EntitySet Name="FollowUps" EntityType="Self.FollowUp" />
+    <EntitySet Name="ItemMasters" EntityType="Self.ItemMaster" />
+    <EntitySet Name="LeadHeaders" EntityType="Self.LeadHeader" />
+    <EntitySet Name="LoadingMasters" EntityType="Self.LoadingMaster" />
+    <EntitySet Name="MenuMasters" EntityType="Self.MenuMaster" />
+    <EntitySet Name="OnFloorItemMasters" EntityType="Self.OnFloorItemMaster" />
+    <EntitySet Name="PartyMasters" EntityType="Self.PartyMaster" />
+    <EntitySet Name="ProcessCuttings" EntityType="Self.ProcessCutting" />
+    <EntitySet Name="ProcessDfgPrints" EntityType="Self.ProcessDfgPrint" />
+    <EntitySet Name="ProcessGrindings" EntityType="Self.ProcessGrinding" />
+    <EntitySet Name="ProcessHoles" EntityType="Self.ProcessHole" />
+    <EntitySet Name="ProcessPackagings" EntityType="Self.ProcessPackaging" />
+    <EntitySet Name="ProcessPaints" EntityType="Self.ProcessPaint" />
+    <EntitySet Name="ProcessStores" EntityType="Self.ProcessStore" />
+    <EntitySet Name="ProcessTemperings" EntityType="Self.ProcessTempering" />
+    <EntitySet Name="ProcessTemperingReports" EntityType="Self.ProcessTemperingReport" />
+    <EntitySet Name="ProcessWashings" EntityType="Self.ProcessWashing" />
+    <EntitySet Name="ProcessWashingOnes" EntityType="Self.ProcessWashingOne" />
+    <EntitySet Name="Productions" EntityType="Self.Production" />
+    <EntitySet Name="ProductionPlannings" EntityType="Self.ProductionPlanning" />
+    <EntitySet Name="ProductionTrails" EntityType="Self.ProductionTrail" />
+    <EntitySet Name="PurchaseHeaders" EntityType="Self.PurchaseHeader" />
+    <EntitySet Name="PurchaseItems" EntityType="Self.PurchaseItem" />
+    <EntitySet Name="SaleHeaders" EntityType="Self.SaleHeader" />
+    <EntitySet Name="SaleItems" EntityType="Self.SaleItem" />
+    <EntitySet Name="StaffMasters" EntityType="Self.StaffMaster" />
+    <EntitySet Name="StockIssuanceHeaders" EntityType="Self.StockIssuanceHeader" />
+    <EntitySet Name="StockIssuanceItems" EntityType="Self.StockIssuanceItem" />
+    <EntitySet Name="StockLedgers" EntityType="Self.StockLedger" />
+    <EntitySet Name="SupplierMasters" EntityType="Self.SupplierMaster" />
+    <EntitySet Name="TourExpenseHeaders" EntityType="Self.TourExpenseHeader" />
+    <EntitySet Name="TourExpenseItems" EntityType="Self.TourExpenseItem" />
+    <EntitySet Name="TourGradeMasters" EntityType="Self.TourGradeMaster" />
+    <EntitySet Name="TourMasters" EntityType="Self.TourMaster" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+    <EntitySet Name="xp_CustomerRequestHeader" EntityType="Self.xp_CustomerRequestHeader" />
+    <EntitySet Name="xp_CustomerRequestItem" EntityType="Self.xp_CustomerRequestItem" />
+    <EntitySet Name="xp_ItemMaster" EntityType="Self.xp_ItemMaster" />
+    <EntitySet Name="xp_ProcurementHeader" EntityType="Self.xp_ProcurementHeader" />
+    <EntitySet Name="xp_ProcurementItem" EntityType="Self.xp_ProcurementItem" />
+    <EntitySet Name="xp_TimeSheetChild" EntityType="Self.xp_TimeSheetChild" />
+    <EntitySet Name="xp_TimeSheetHeader" EntityType="Self.xp_TimeSheetHeader" />
+    <EntitySet Name="vwItemListWithModelAndGlassColors" EntityType="Self.vwItemListWithModelAndGlassColor" />
+    <EntitySet Name="vwPurchaseHeaderSupplierDetails" EntityType="Self.vwPurchaseHeaderSupplierDetail" />
+    <EntitySet Name="vwPurchaseOrderDashboardDatas" EntityType="Self.vwPurchaseOrderDashboardData" />
+    <EntitySet Name="vwSaleHeaderPartyDetails" EntityType="Self.vwSaleHeaderPartyDetail" />
+    <EntitySet Name="vwSaleOrderDashboardDatas" EntityType="Self.vwSaleOrderDashboardData" />
+    <EntitySet Name="vwxp_ProcurementHeaderSupplierDetail" EntityType="Self.vwxp_ProcurementHeaderSupplierDetail" />
+    <FunctionImport Name="StringToIntList" IsComposable="true" ReturnType="Collection(aasgwebModel.StringToIntList_Result)">
+      <Parameter Name="str" Mode="In" Type="String" />
+      <Parameter Name="delimeter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_GetProductionItemBreakageRejectOkCountDetails" ReturnType="Collection(aasgwebModel.sp_GetProductionItemBreakageRejectOkCountDetails_Result)" />
+    <FunctionImport Name="sp_ItemProcessDetail" ReturnType="Collection(aasgwebModel.sp_ItemProcessDetail_Result)">
+      <Parameter Name="batch_number" Mode="In" Type="String" />
+      <Parameter Name="ItemMasterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_PlanPartyPartyProduction">
+      <Parameter Name="SaleHeaderId" Mode="In" Type="String" />
+      <Parameter Name="PartyMasterId" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_StockLedgerDetail" ReturnType="Collection(aasgwebModel.sp_StockLedgerDetail_Result)" />
+    <FunctionImport Name="sp_tourdetail" ReturnType="Collection(aasgwebModel.sp_tourdetail_Result)">
+      <Parameter Name="tour_master_id" Mode="In" Type="Int32" />
+      <Parameter Name="staff_master_id" Mode="In" Type="Int32" />
+      <Parameter Name="FromDate" Mode="In" Type="String" />
+      <Parameter Name="ToDate" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_GetProductionItemBreakageRejectOkCountDetails_Result">
+    <Property Type="Int32" Name="production_id" Nullable="true" />
+    <Property Type="String" Name="batch_number" Nullable="true" MaxLength="30" />
+    <Property Type="Guid" Name="guid" Nullable="true" />
+    <Property Type="Int32" Name="item_master_id" Nullable="true" />
+    <Property Type="String" Name="item_brand" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="item_name_with_glasscolor" Nullable="true" MaxLength="226" />
+    <Property Type="String" Name="item_model" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="item_type_name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="item_glass_color" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="item_thickness" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="sheet_size" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="cutting_id" Nullable="true" />
+    <Property Type="Int32" Name="total_pcs" Nullable="true" />
+    <Property Type="Int32" Name="store_id" Nullable="true" />
+    <Property Type="Int32" Name="ok_pcs" Nullable="true" />
+    <Property Type="Int32" Name="Total_reject" Nullable="true" />
+    <Property Type="Int32" Name="total_break" Nullable="true" />
+    <Property Type="Int32" Name="raw_balance" Nullable="true" />
+    <Property Type="String" Name="operator_name" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Productiondate" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="sp_ItemProcessDetail_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Guid" Name="guid" Nullable="false" />
+    <Property Type="Int32" Name="item_master_id" Nullable="false" />
+    <Property Type="String" Name="item_brand" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="item_model" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="item_type_name" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="item_glass_color" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="sale_header_master_id" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="party_master_id" Nullable="false" MaxLength="30" />
+    <Property Type="String" Name="batch_number" Nullable="false" MaxLength="30" />
+    <Property Type="Int32" Name="production_quantity" Nullable="false" />
+    <Property Type="DateTime" Name="Startingdate" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="EndingDate" Nullable="false" Precision="23" />
+    <Property Type="String" Name="item_thickness" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="item_sheet_size" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="sheet_issued" Nullable="false" />
+    <Property Type="Int32" Name="target_pcs_from_sheet_issued" Nullable="false" />
+    <Property Type="Int32" Name="actual_pcs_from_sheet_issued" Nullable="false" />
+    <Property Type="String" Name="draft_size" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="target_pcs_from_draft_size" Nullable="false" />
+    <Property Type="Int32" Name="actual_pcs_from_draft_size" Nullable="false" />
+    <Property Type="Int32" Name="pcs_from_rejection" Nullable="false" />
+    <Property Type="Int32" Name="actual_pcs_from_rejection" Nullable="false" />
+    <Property Type="Int32" Name="broken_sheets_in_crate" Nullable="false" />
+    <Property Type="Int32" Name="broken_no_of_sheet" Nullable="false" />
+    <Property Type="Int32" Name="broken_pcs_cut_from_sheet" Nullable="false" />
+    <Property Type="String" Name="broken_left_over_size" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="total_received" Nullable="false" />
+    <Property Type="Int32" Name="total_broken" Nullable="false" />
+    <Property Type="Int32" Name="total_reject" Nullable="false" />
+    <Property Type="Int32" Name="total_pcs_transferred" Nullable="false" />
+    <Property Type="Int32" Name="signature" Nullable="false" />
+    <Property Type="Decimal" Name="item_average_hours_cost" Nullable="true" Precision="10" Scale="2" />
+    <Property Type="Int32" Name="raw_balance" Nullable="true" />
+    <Property Type="String" Name="breakage_reason" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="reject_reason" Nullable="true" MaxLength="2000" />
+    <Property Type="String" Name="remarks" Nullable="true" MaxLength="200" />
+    <Property Type="DateTime" Name="created_on" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="created_by" Nullable="false" />
+    <Property Type="DateTime" Name="modified_on" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="modified_by" Nullable="false" />
+    <Property Type="String" Name="user_ip" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="is_active" Nullable="false" />
+    <Property Type="String" Name="department" Nullable="false" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="sp_StockLedgerDetail_Result">
+    <Property Type="Int32" Name="purchase_header_id" Nullable="true" />
+    <Property Type="String" Name="purchase_invoice_number" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="purchase_item_quantity" Nullable="true" />
+    <Property Type="Int32" Name="purchase_item_received_quantity" Nullable="true" />
+    <Property Type="DateTime" Name="created_on" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="created_by" Nullable="true" />
+    <Property Type="DateTime" Name="modified_on" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="modified_by" Nullable="true" />
+    <Property Type="String" Name="user_ip" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="is_active" Nullable="true" MaxLength="5" />
+  </ComplexType>
+  <ComplexType Name="sp_tourdetail_Result">
+    <Property Type="DateTime" Name="reqdate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="tour_master_id" Nullable="false" />
+    <Property Type="String" Name="tour_name" Nullable="false" MaxLength="100" />
+    <Property Type="DateTime" Name="start_date" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="end_date" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="staff_master_id" Nullable="false" />
+    <Property Type="String" Name="staff_name" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="tour_numberofdays" Nullable="false" />
+    <Property Type="String" Name="tourgrade_name" Nullable="false" MaxLength="100" />
+    <Property Type="Decimal" Name="tourgrade_perday_food" Nullable="false" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="tourgrade_perday_hotel" Nullable="false" Precision="8" Scale="2" />
+    <Property Type="Decimal" Name="tourgrade_perday_transport" Nullable="false" Precision="8" Scale="2" />
+    <Property Type="Int32" Name="expense_total" Nullable="false" />
+  </ComplexType>
+</Schema>

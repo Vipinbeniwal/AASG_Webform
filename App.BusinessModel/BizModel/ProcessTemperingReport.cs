@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace App.BusinessModel
+{
+    public class ProcessTemperingReport : CommonProperties
+    {
+        public int process_tempering_report_id { get; set; }
+        public System.Guid guid { get; set; }
+        public int item_master_id { get; set; }
+        public int process_tempering_id { get; set; }
+        public string item_brand { get; set; }
+        public string item_model { get; set; }
+        public string item_type_name { get; set; }
+        public string item_glass_color { get; set; }
+        public string sale_header_master_id { get; set; }
+        public string party_master_id { get; set; }
+        public System.DateTime report_date { get; set; }
+        public string htf_shift_from { get; set; }
+        public string htf_shift_to { get; set; }
+        public string plant_number { get; set; }
+        public string report_shift { get; set; }
+        public string batch_number { get; set; }
+        public int quantity_in_pcs { get; set; }
+        public int production_target_in_pcs { get; set; }
+        public decimal production_target_in_percentage { get; set; }
+        public System.DateTime heating_on { get; set; }
+        public decimal furnace_meter_on_heating { get; set; }
+        public decimal big_blower_on_heating { get; set; }
+        public decimal small_blower_on_heating { get; set; }
+        public System.DateTime production_start { get; set; }
+        public decimal furnace_meter_start_production { get; set; }
+        public decimal big_blower_start_production { get; set; }
+        public decimal small_blower_start_production { get; set; }
+        public System.DateTime production_finish { get; set; }
+        public decimal furnace_meter_finish_production { get; set; }
+        public decimal big_blower_finish_production { get; set; }
+        public decimal small_blower_finish_production { get; set; }
+        public string operator_name { get; set; }
+        public string line_incharge { get; set; }
+        public string helper_name { get; set; }
+        public string supervisor_name { get; set; }
+        public string hour_name { get; set; }
+        public string item_verify_status { get; set; }
+        public int ok_total_pcs_in_hours { get; set; }
+        public int breakage_total_pcs { get; set; }
+        public int reject_total_pcs { get; set; }
+        public int signature { get; set; }
+        public decimal item_average_hours_cost { get; set; }
+        public int item_raw_balance { get; set; }
+        public int total_received { get; set; }
+        public int total_broken { get; set; }
+        public int total_reject { get; set; }
+        public int total_pcs_transferred { get; set; }
+        public string breakage_reason { get; set; }
+        public string reject_reason { get; set; }
+        public string remarks { get; set; }
+       
+
+    }
+}

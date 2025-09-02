@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace App.BusinessModel
+{
+     public class StaffMaster : CommonProperties
+    {
+        public int staff_master_id { get; set; }
+        public System.Guid guid { get; set; }
+        public string staff_employee_id { get; set; }
+        public int user_role_id { get; set; }
+        public string staff_name { get; set; }
+        public string staff_phoneNo { get; set; }
+        public string staff_email { get; set; }
+        public string staff_password { get; set; }
+        public int staff_designation_id { get; set; }
+        public System.DateTime staff_joinning_date { get; set; }
+        public int staff_grade_id { get; set; }
+        public string staff_current_address { get; set; }
+        public string staff_current_city { get; set; }
+        public string staff_current_state { get; set; }
+        public string staff_current_pincode { get; set; }
+        public string staff_permanent_address { get; set; }
+        public string staff_permanent_city { get; set; }
+        public string staff_permanent_state { get; set; }
+        public string staff_permanent_pincode { get; set; }
+        public string staff_bankname { get; set; }
+        public string staff_account_number { get; set; }
+        public string staff_ifsc_number { get; set; }
+        public string staff_pancard_number { get; set; }
+        public string staff_pancard_image { get; set; }
+        public string staff_aadhar_number { get; set; }
+        public string staff_aadhar_front { get; set; }
+        public string staff_aadhar_back { get; set; }
+        public Nullable<System.DateTime> last_order_date { get; set; }
+    }
+}
